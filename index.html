@@ -1,125 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Fame Express LLC</title>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
+    <!-- End Google Tag Manager -->
+
+    <title>Fame Express LLC - Software Solutions That Improve the World</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Fame Express LLC builds innovative software solutions including AI-powered Amazon Ads optimization and various web applications.">
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="https://newcss.net/new.min.css">
-      
+    <!-- Geist Font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/font.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: #1a1a1a;
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: white;
+      }
+
+      .hero p {
+        font-size: 1.4rem;
+        max-width: 700px;
+        margin: 0 auto;
+        font-weight: 500;
+        color: rgb(229, 231, 235);
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Sections */
+      section {
+        padding: 80px 20px;
+      }
+
+      .bg-white {
+        background: white;
+      }
+
+      .bg-light {
+        background: #f8f9fa;
+      }
+
+      h2 {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        text-align: center;
+        color: #1a1a1a;
+        font-weight: 800;
+      }
+
+      /* Services Section */
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+        margin-bottom: 40px;
+      }
+
+      .service-card {
+        background: white;
+        color: #1a1a1a;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        transition: transform 0.2s;
+        border: 2px solid #e5e7eb;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      }
+
+      .service-card h3 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+        font-weight: 800;
+        color: #1a1a1a;
+      }
+
+      .service-card p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #374151;
+      }
+
+      .service-card a {
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: inline-block;
+        padding: 12px 30px;
+        background: #146eb4;
+        border-radius: 6px;
+        transition: all 0.2s;
+      }
+
+      .service-card a:hover {
+        background: #0d5a95;
+        transform: translateY(-2px);
+      }
+
+      /* Projects List */
+      .projects-list {
+        list-style: none;
+      }
+
+      .projects-list li {
+        margin-bottom: 25px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: box-shadow 0.2s;
+        border: 2px solid #f0f0f0;
+      }
+
+      .projects-list li:hover {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+
+      .projects-list a {
+        color: #146eb4;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .projects-list a:hover {
+        text-decoration: underline;
+      }
+
+      .project-description {
+        color: #666;
+        margin-top: 8px;
+        line-height: 1.6;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        text-align: center;
+        background: #1a1a1a;
+        color: white;
+        padding: 60px 20px;
+      }
+
+      .contact-section h2 {
+        color: white;
+        margin-bottom: 20px;
+      }
+
+      .contact-section a {
+        color: #FF9900;
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .contact-section a:hover {
+        text-decoration: underline;
+      }
+
+      /* Footer */
+      footer {
+        background: #0a0a0a;
+        color: #999;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 0.9rem;
+      }
+
+      footer a {
+        color: #FF9900;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1.1rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        .services {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <h1>Fame Express LLC</h1>
-    </header>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <p>We build software solutions that improve the world.</p>
-    <p>Projects:</p>
-    <ul>
-      <li>
-        <a
-          href="https://github.com/anandvc/"
-          target="_blank"
-          >Amazon Ads Optimizer via a combination of AMC APIs, AMC SQL and AI (Private)</a
-        >: Automatically generate reports that analyze the performance of Amazon Ad campaigns, creatives, audiences, keywords, targeting and placements.
-      </li>
-      
-      <li>
-        <a
-          href="https://github.com/anandvc/email-prioritizer"
-          target="_blank"
-          >AI Email Prioritizer</a
-        >: Auto-Organize Gmail with Nvidia LLM -- free and open source
-      </li>
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="container">
+        <h1>Fame Express LLC</h1>
+        <p>We build software solutions that improve the world.</p>
+      </div>
+    </div>
 
-      <li>
-        <a
-          href="https://options-analyzer-anandvc-anandvcs-projects.vercel.app/"
-          target="_blank"
-          >Options Selling ROI Calculator</a
-        >: A free Options Selling data analysis tool.
-      </li>
+    <!-- Services Section -->
+    <section class="bg-white">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="services">
+          <div class="service-card">
+            <h3>🤖 AI-Powered Amazon Ads Optimization</h3>
+            <p>Our AI Agent finds wasteful spending and profit opportunities using Amazon Marketing Cloud. For one client, we discovered $170K/month in wasted spend.</p>
+            <p><strong>Pricing:</strong> Only 25% of wasted spend we find, capped at $10,000. No waste found? You pay $0.</p>
+            <a href="/amazon-ads-optimization.html">Learn More →</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <li>
-        <a
-          href="https://v0-quality-of-earnings-tool.vercel.app/"
-          target="_blank"
-          >Quality of Earnings Analysis Tool</a
-        >: A free Quality of Earnings Analysis tool to be used when evaluating businesses for purchase.
-      </li>
-      
-      <li>
-        <a
-          href="https://crux-report.vercel.app/"
-          target="_blank"
-          >Chrome UX Report Lookup Tool</a
-        >: A free Chrome UX Report Lookup tool to compare Core Web Vitals scores seen by Chrome.
-      </li>      
-      
-      <li>
-        <a
-          href="https://spell12.com"
-          target="_blank"
-          >Spell 12</a
-        >: 12 words daily. Listen &amp; Spell. A fun spelling game that lets you practice 12 words every day for free.
-      </li>
+    <!-- Projects Section -->
+    <section class="bg-light">
+      <div class="container">
+        <h2>Our Projects</h2>
+        <ul class="projects-list">
+          <li>
+            <a href="https://github.com/anandvc/" target="_blank">Amazon Ads Optimizer via AMC APIs, AMC SQL and AI</a>
+            <div class="project-description">Automatically generate reports that analyze the performance of Amazon Ad campaigns, creatives, audiences, keywords, targeting and placements. (Private)</div>
+          </li>
 
-      <li>
-        <a
-          href="https://www.growthchamp.com"
-          target="_blank"
-          >Growth Champ</a
-        >: Social Media Management.
-      </li>
-      <li>
-        <a
-          href="https://www.westilldate.com"
-          target="_blank"
-          >We Still Date</a
-        >: Find interesting things to do near you as a couple.
-      </li>
-      <li>
-        <a
-          href="https://www.phunwa.com"
-          target="_blank"
-          >Phunwa</a
-        >: India&#39;s landline whitepages directory.
-      </li>
-      <li>
-        <a
-          href="https://www.allindianpatents.com"
-          target="_blank"
-          >All Indian Patents</a
-        >: The largest open directory of patents published in India.
-      </li>
-      <li>
-        <a
-          href="https://www.angrejinews.com"
-          target="_blank"
-          >Angreji News</a
-        >: Transliterated Hindi news.
-      </li>
-      <li>
-        <a
-          href="https://brainreactions.net"
-          target="_blank"
-          >BrainReactions.net</a
-        >: Online brainstorming
-      </li>
-      <li>and others.</li>
-    </ul>
-    <h2>
-      Contact Us:
-    </h2>
-    <p>
-      anand @ fameexpress.com
-    </p>
-    <br>
-    <br>
-    <p>
-      <a href="/privacypolicy.html">Privacy Policy</a>
-    </p>
+          <li>
+            <a href="https://github.com/anandvc/email-prioritizer" target="_blank">AI Email Prioritizer</a>
+            <div class="project-description">Auto-Organize Gmail with Nvidia LLM — free and open source</div>
+          </li>
+
+          <li>
+            <a href="https://options-analyzer-anandvc-anandvcs-projects.vercel.app/" target="_blank">Options Selling ROI Calculator</a>
+            <div class="project-description">A free Options Selling data analysis tool</div>
+          </li>
+
+          <li>
+            <a href="https://v0-quality-of-earnings-tool.vercel.app/" target="_blank">Quality of Earnings Analysis Tool</a>
+            <div class="project-description">A free Quality of Earnings Analysis tool to be used when evaluating businesses for purchase</div>
+          </li>
+
+          <li>
+            <a href="https://crux-report.vercel.app/" target="_blank">Chrome UX Report Lookup Tool</a>
+            <div class="project-description">A free Chrome UX Report Lookup tool to compare Core Web Vitals scores seen by Chrome</div>
+          </li>
+
+          <li>
+            <a href="https://spell12.com" target="_blank">Spell 12</a>
+            <div class="project-description">12 words daily. Listen & Spell. A fun spelling game that lets you practice 12 words every day for free</div>
+          </li>
+
+          <li>
+            <a href="https://www.growthchamp.com" target="_blank">Growth Champ</a>
+            <div class="project-description">The Ultimate Growth Engineering Course</div>
+          </li>
+
+          <li>
+            <a href="https://www.westilldate.com" target="_blank">We Still Date</a>
+            <div class="project-description">Find interesting things to do near you as a couple</div>
+          </li>
+
+          <li>
+            <a href="https://www.phunwa.com" target="_blank">Phunwa</a>
+            <div class="project-description">India's landline whitepages directory</div>
+          </li>
+
+          <li>
+            <a href="https://www.allindianpatents.com" target="_blank">All Indian Patents</a>
+            <div class="project-description">The largest open directory of patents published in India</div>
+          </li>
+
+          <li>
+            <a href="https://www.angrejinews.com" target="_blank">Angreji News</a>
+            <div class="project-description">Transliterated Hindi news</div>
+          </li>
+
+          <li>
+            <a href="https://brainreactions.net" target="_blank">BrainReactions.net</a>
+            <div class="project-description">Online brainstorming</div>
+          </li>
+
+          <li>and others.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p><a href="mailto:anand@fameexpress.com">anand@fameexpress.com</a></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Fame Express LLC | San Francisco, CA | <a href="/privacypolicy.html">Privacy Policy</a></p>
+      </div>
+    </footer>
   </body>
 </html>
