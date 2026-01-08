@@ -1,167 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
-    <!-- End Google Tag Manager -->
 
-    <title>Thank You | Fame Express LLC</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Thank you for your inquiry">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXFCWK36');</script>
+  <!-- End Google Tag Manager -->
 
-    <!-- Geist Font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/font.css">
+  <title>Thank You | Fame Express</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  <!-- Geist Font -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/font.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="index.css">
 
-      body {
-        font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: #f8f9fa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-      }
+  <style>
+    .thank-you-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 60px 40px;
+      max-width: 600px;
+      margin: 100px auto;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
 
-      .container {
-        max-width: 600px;
-        margin: 0 auto;
-        padding: 60px 20px;
-        text-align: center;
-      }
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
-      .success-card {
-        background: white;
-        padding: 60px 40px;
-        border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        border: 2px solid #f0f0f0;
-      }
-
-      .checkmark {
-        width: 80px;
-        height: 80px;
-        background: #28a745;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 30px;
-      }
-
-      .checkmark svg {
-        width: 50px;
-        height: 50px;
-        fill: white;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 800;
-        color: #1a1a1a;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 15px;
-        line-height: 1.8;
-      }
-
-      .email-info {
-        background: #f8f9fa;
-        padding: 20px;
-        border-radius: 8px;
-        margin: 30px 0;
-        font-size: 1rem;
-        color: #666;
-      }
-
-      .email-info strong {
-        color: #146eb4;
-      }
-
-      .cta-button {
-        display: inline-block;
-        background: #146eb4;
-        color: white;
-        padding: 15px 40px;
-        font-size: 1.1rem;
-        font-weight: 700;
-        border: none;
-        border-radius: 8px;
-        text-decoration: none;
-        margin-top: 30px;
-        transition: all 0.2s;
-      }
-
-      .cta-button:hover {
-        background: #0d5a95;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      }
-
-      /* Responsive */
-      @media (max-width: 768px) {
-        h1 {
-          font-size: 2rem;
-        }
-
-        p {
-          font-size: 1.1rem;
-        }
-
-        .success-card {
-          padding: 40px 30px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <div class="container">
-      <div class="success-card">
-        <div class="checkmark">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-          </svg>
-        </div>
-
-        <h1>Thank You!</h1>
-        <p>We've received your inquiry about our AI-Powered Amazon Ads Optimization service.</p>
-
-        <div class="email-info">
-          <p><strong>What happens next?</strong></p>
-          <p style="margin-bottom: 0;">We'll review your information and reach out within 1 business day to schedule your free analysis call.</p>
-        </div>
-
-        <p>In the meantime, feel free to email us directly at <strong style="color: #146eb4;">anand@fameexpress.com</strong> if you have any questions.</p>
-
-        <a href="/" class="cta-button">Return to Homepage</a>
+  <nav style="padding: 24px 0;">
+    <div class="container nav-container">
+      <div style="font-weight: 800; font-size: 1.5rem;"><a href="index.html" style="color: white;">Fame Express</a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" style="color: white;">Back to Home</a>
       </div>
     </div>
+  </nav>
 
-    <footer style="background: #1a1a1a; color: #999; text-align: center; padding: 30px 20px; font-size: 0.9rem; position: fixed; bottom: 0; left: 0; right: 0;">
-      <p>&copy; 2025 Fame Express LLC | San Francisco, CA</p>
-      <p style="margin-top: 10px;"><a href="/" style="color: #FF9900; text-decoration: none;">Home</a> | <a href="/privacypolicy.html" style="color: #FF9900; text-decoration: none;">Privacy Policy</a> | <a href="/terms.html" style="color: #FF9900; text-decoration: none;">Terms of Service</a> | <a href="/support.html" style="color: #FF9900; text-decoration: none;">Customer Support</a></p>
-    </footer>
-  </body>
+  <div class="container">
+    <div class="thank-you-card fade-in">
+      <div style="font-size: 4rem; margin-bottom: 20px;">🎉</div>
+      <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Request Received!</h1>
+      <p style="margin-bottom: 30px; font-size: 1.2rem;">
+        Thanks for reaching out. We've received your request for a free Amazon Ads audit.
+        One of our agents (human or AI!) will be in touch with you shortly.
+      </p>
+
+      <a href="index.html" class="btn btn-primary">Return Home</a>
+    </div>
+  </div>
+
+  <footer style="margin-top: 100px; text-align: center; color: var(--text-secondary);">
+    <div class="container">
+      <p>&copy; 2025 Fame Express LLC</p>
+    </div>
+  </footer>
+</body>
+
 </html>
