@@ -5236,6 +5236,11 @@ fameexpress.com #AmazonAds #FameExpress`;
         function onClick(event) {
             if (event.target.closest('button, input, select, textarea, label, a, .form-panel')) return;
 
+            // Displace particles at click position (visual feedback for all clicks)
+            if (state.mouseWorldPos) {
+                displaceParticlesAt3D(state.mouseWorldPos, 120, 8);
+            }
+
             // Check for enemy hit at click position
             if (state.mouseWorldPos && enemyManager) {
                 checkMouseHit(event.clientX, event.clientY);
@@ -5255,7 +5260,40 @@ fameexpress.com #AmazonAds #FameExpress`;
                 const t = (planeZ - camera.position.z) / raycaster.ray.direction.z;
                 const touchWorldPos = raycaster.ray.origin.clone().add(raycaster.ray.direction.clone().multiplyScalar(t));
 
+                // Displace particles at touch position (visual feedback for all touches)
+                displaceParticlesAt3D(touchWorldPos, 120, 8);
+
                 checkMouseHit(touch.clientX, touch.clientY, touchWorldPos);
+            }
+        }
+
+        // Displace particles in 3D space at impact point
+        function displaceParticlesAt3D(worldPos, radius = 150, force = 12) {
+            if (!particleSystem) return;
+
+            for (let i = 0; i < particleSystem.count; i++) {
+                const i3 = i * 3;
+                const px = particleSystem.positions[i3];
+                const py = particleSystem.positions[i3 + 1];
+                const pz = particleSystem.positions[i3 + 2];
+
+                // Calculate 3D distance from impact point
+                const dx = px - worldPos.x;
+                const dy = py - worldPos.y;
+                const dz = pz - worldPos.z;
+                const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+
+                if (dist < radius && dist > 0) {
+                    // Displacement falls off with distance
+                    const falloff = 1 - (dist / radius);
+                    const pushForce = force * falloff;
+
+                    // Apply force in all 3 dimensions (normalized direction * force)
+                    const norm = dist;
+                    particleSystem.velocities[i3] += (dx / norm) * pushForce;
+                    particleSystem.velocities[i3 + 1] += (dy / norm) * pushForce;
+                    particleSystem.velocities[i3 + 2] += (dz / norm) * pushForce;
+                }
             }
         }
 
