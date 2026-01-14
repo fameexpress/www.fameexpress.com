@@ -1,2 +1,0 @@
-1. The generated particles all look like they're in a straight line, so we do not get any 3D perception of depth. Can we improve that somehow in an organized way to make it look more like 3D space?
-2. The design of the non-index pages should match our index page.

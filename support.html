@@ -30,6 +30,61 @@
       background-color: #f8f9fa;
     }
 
+    /* Header Navigation */
+    .header {
+      background: #1a1a1a;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #e5e7eb;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #FF9900;
+    }
+
+    .nav-cta {
+      background: #FF9900;
+      color: white !important;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: #e68a00;
+      transform: translateY(-1px);
+    }
+
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -145,6 +200,14 @@
       .contact-methods {
         grid-template-columns: 1fr;
       }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
     }
   </style>
 </head>
@@ -153,6 +216,19 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="logo">Fame Express</a>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/team.html">Team</a>
+        <a href="/support.html">Support</a>
+        <a href="/#contact" class="nav-cta">Get Free Audit</a>
+      </nav>
+    </div>
+  </header>
 
   <div class="container">
     <div class="content-card">
