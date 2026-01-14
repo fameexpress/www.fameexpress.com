@@ -1009,7 +1009,7 @@
         /* Sound Toggle */
         #sound-toggle {
             position: fixed;
-            top: 20px;
+            top: 140px;
             right: 20px;
             z-index: 150;
             width: 44px;
@@ -1431,6 +1431,16 @@
                 width: 120px;
                 height: 90px;
             }
+
+            /* Hide combo box on mobile to save space */
+            #game-hud .game-stat:last-child {
+                display: none;
+            }
+
+            /* Reduce gap for remaining boxes */
+            #game-hud {
+                gap: 20px;
+            }
         }
 
         /* =====================================================
@@ -1607,6 +1617,7 @@
             justify-content: center;
             font-size: 4rem;
             flex-shrink: 0;
+            overflow: hidden;
         }
 
         .founder-bio h3 {
@@ -1698,6 +1709,105 @@
             max-height: 300px;
             padding-bottom: 24px;
         }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
+            margin-bottom: 200px;
+        }
+
+        footer a {
+            color: #FF9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Image Lightbox */
+        #image-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+
+        #image-lightbox.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .lightbox-container {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-image {
+            width: auto;
+            height: auto;
+            max-width: 85vw;
+            max-height: 80vh;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            box-shadow: 0 10px 50px rgba(0, 255, 255, 0.2);
+        }
+
+        .lightbox-caption {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: #00ffff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 2001;
+            line-height: 1;
+        }
+
+        .lightbox-close:hover {
+            color: #ffffff;
+            transform: scale(1.2);
+        }
+
+        .screenshot-frame {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -1746,6 +1856,10 @@
                             <img src="assets/screenshots/audit-action-plan.png" alt="Audit Action Plan showing prioritized recommendations" loading="lazy">
                         </div>
                         <p class="screenshot-caption">Prioritized action plan with potential value</p>
+                        <div class="screenshot-frame">
+                            <img src="assets/screenshots/audit-path-to-purchase.png" alt="Path to Purchase Attribution Analysis" loading="lazy">
+                        </div>
+                        <p class="screenshot-caption">Multi-touch attribution and customer journey insights</p>
                     </div>
 
                     <!-- Platform Access Column -->
@@ -1878,7 +1992,9 @@
             <div class="chapter-content" style="max-width: 900px;">
                 <h2>Built by Someone Who's Been There</h2>
                 <div class="founder-section">
-                    <div class="founder-avatar">AC</div>
+                    <div class="founder-avatar">
+                        <img src="assets/anand-headshot-2025.jpg" alt="Anand Chhatpar" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                    </div>
                     <div class="founder-bio">
                         <h3>Anand Chhatpar</h3>
                         <p class="founder-title">Founder, Fame Express</p>
@@ -2055,32 +2171,6 @@
             <span class="hud-value" id="sql-count">0</span>
         </div>
     </div>
-
-    <div class="hud hud-br">
-        <button id="reduce-motion-btn" class="hud-btn">Reduce Motion</button>
-    </div>
-
-    <!-- =====================================================
-         HAND CONTROL PANEL
-         ===================================================== -->
-    <div id="hand-control-panel">
-        <button id="hand-toggle" class="toggle-btn">
-            <span class="icon">&#9995;</span>
-            <span class="label">Try Hand Control</span>
-        </button>
-        <div id="hand-status" class="hidden">
-            <div class="hand-indicator">
-                <span class="hand-label">LEFT</span>
-                <span class="gesture-status" id="left-gesture">IDLE</span>
-            </div>
-            <div class="hand-indicator">
-                <span class="hand-label">RIGHT</span>
-                <span class="gesture-status" id="right-gesture">IDLE</span>
-            </div>
-        </div>
-    </div>
-
-    <video id="hand-video" class="hidden" autoplay playsinline></video>
 
     <!-- =====================================================
          STICKY CTA
@@ -4232,9 +4322,9 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                 const streamWidth = 600;
                 const streamHeight = 250;
-                // Particles in BACKGROUND (negative Z, far from camera)
-                const streamZMin = -500;  // Far back
-                const streamZMax = -200;  // Still behind enemies
+                // Particles in BACKGROUND (negative Z, far from camera) - EXPANDED DEPTH RANGE
+                const streamZMin = -800;  // Far back (extended)
+                const streamZMax = -100;  // Closer to camera (extended)
 
                 for (let i = 0; i < this.count; i++) {
                     const i3 = i * 3;
@@ -4257,19 +4347,28 @@ fameexpress.com #AmazonAds #FameExpress`;
                         this.colors[i3 + 2] = CONFIG.particles.species.profit.color[2];
                     }
 
-                    // Initialize positions - BACKGROUND LAYER
+                    // Initialize positions - BACKGROUND LAYER with depth variation
+                    const z = streamZMin + Math.random() * (streamZMax - streamZMin);
                     this.positions[i3] = (Math.random() - 0.5) * streamWidth * 2;
-                    this.positions[i3 + 1] = (Math.random() - 0.5) * streamHeight;
-                    this.positions[i3 + 2] = streamZMin + Math.random() * (streamZMax - streamZMin);
 
-                    // Initial velocity (rightward flow)
+                    // Y distribution varies by depth for layered effect
+                    const zNorm = (z + 800) / 700; // 0 (far) to 1 (near)
+                    const ySpread = 150 + zNorm * 100; // Far particles more spread vertically
+                    this.positions[i3 + 1] = (Math.random() - 0.5) * ySpread;
+                    this.positions[i3 + 2] = z;
+
+                    // Calculate depth factor for size and alpha
+                    const depth = Math.abs(z);
+                    const depthFactor = 1 - (depth - 100) / 700; // 0 (far) to 1 (near)
+
+                    // Initial velocity (rightward flow) with subtle Z movement for parallax
                     this.velocities[i3] = CONFIG.physics.streamSpeed * (0.8 + Math.random() * 0.4);
                     this.velocities[i3 + 1] = 0;
-                    this.velocities[i3 + 2] = 0;
+                    this.velocities[i3 + 2] = (Math.random() - 0.5) * 0.5 * (1 - depthFactor); // Far particles move more in Z
 
-                    // Visual attributes - SMALLER for background
-                    this.sizes[i] = 1.5 + Math.random() * 1.5;
-                    this.alphas[i] = 0.3 + Math.random() * 0.3;  // Lower opacity
+                    // Visual attributes - depth-based sizing and brightness
+                    this.sizes[i] = 1.5 + depthFactor * 4.5; // Range: 1.5 (far) to 6 (near)
+                    this.alphas[i] = 0.4 + depthFactor * 0.6; // Range: 0.4 (far) to 1.0 (near)
                     this.phases[i] = Math.random() * Math.PI * 2;
                 }
             }
@@ -4430,14 +4529,14 @@ fameexpress.com #AmazonAds #FameExpress`;
                     if (x > streamWidth) {
                         x = -streamWidth;
                         y = (Math.random() - 0.5) * 200;
-                        z = -500 + Math.random() * 300;  // Stay in background
+                        z = -800 + Math.random() * 700;  // Stay in background - EXPANDED DEPTH
                     } else if (x < -streamWidth) {
                         x = streamWidth;
                     }
 
                     // Clamp Y and Z - keep in BACKGROUND
                     y = Math.max(-150, Math.min(150, y));
-                    z = Math.max(-500, Math.min(-200, z));  // Background layer only
+                    z = Math.max(-800, Math.min(-100, z));  // Background layer only - EXPANDED DEPTH
 
                     // Store
                     this.positions[i3] = x;
@@ -4636,7 +4735,7 @@ fameexpress.com #AmazonAds #FameExpress`;
             }
 
             camera.position.lerp(target, 0.03);
-            camera.lookAt(0, 0, 0);
+            camera.lookAt(0, -30, -200); // Looking down at particles
         }
 
         // =====================================================
@@ -5011,31 +5110,6 @@ fameexpress.com #AmazonAds #FameExpress`;
             return 'idle';
         }
 
-        async function toggleHandTracking() {
-            const btn = document.getElementById('hand-toggle');
-            const status = document.getElementById('hand-status');
-            const video = document.getElementById('hand-video');
-
-            if (state.hands.enabled) {
-                state.hands.enabled = false;
-                handCamera.stop();
-                btn.classList.remove('active');
-                status.classList.add('hidden');
-                video.classList.add('hidden');
-            } else {
-                try {
-                    await handCamera.start();
-                    state.hands.enabled = true;
-                    btn.classList.add('active');
-                    status.classList.remove('hidden');
-                    video.classList.remove('hidden');
-                } catch (err) {
-                    console.log('Camera access denied');
-                    alert('Camera access is required for hand tracking. Please enable camera permissions.');
-                }
-            }
-        }
-
         // =====================================================
         // 9. INPUT MANAGER (Mouse/Touch)
         // =====================================================
@@ -5048,8 +5122,6 @@ fameexpress.com #AmazonAds #FameExpress`;
             document.addEventListener('click', onClick);
             document.addEventListener('touchstart', onTouch, { passive: true });
 
-            document.getElementById('hand-toggle').addEventListener('click', toggleHandTracking);
-            document.getElementById('reduce-motion-btn').addEventListener('click', toggleReduceMotion);
             document.getElementById('cta-sticky').addEventListener('click', scrollToForm);
 
             // Query cards
@@ -5394,11 +5466,7 @@ fameexpress.com #AmazonAds #FameExpress`;
         // =====================================================
         // 11. ACCESSIBILITY
         // =====================================================
-        function toggleReduceMotion() {
-            state.accessibility.reduceMotion = !state.accessibility.reduceMotion;
-            document.body.classList.toggle('reduce-motion', state.accessibility.reduceMotion);
-            document.getElementById('reduce-motion-btn').classList.toggle('active', state.accessibility.reduceMotion);
-        }
+        // toggleReduceMotion function removed - button no longer exists
 
         // Check prefers-reduced-motion
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -5424,8 +5492,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                 1,
                 1000
             );
-            camera.position.set(0, 0, 400);
-            camera.lookAt(0, 0, -200);
+            camera.position.set(0, 100, 400); // Raised camera to look down
+            camera.lookAt(0, -30, -200); // Looking down at particles
 
             // Renderer
             const canvas = document.getElementById('main-canvas');
@@ -5627,6 +5695,69 @@ fameexpress.com #AmazonAds #FameExpress`;
                 }
             });
         });
+
+        // Screenshot Lightbox Functionality
+        window.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('image-lightbox');
+
+            if (!lightbox) return;
+
+            // Close Lightbox Function
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = ''; // Restore scroll
+            };
+
+            // Add click handlers to all screenshot frames
+            document.querySelectorAll('.screenshot-frame').forEach(frame => {
+                frame.addEventListener('click', (e) => {
+                    const img = frame.querySelector('img');
+                    const caption = frame.nextElementSibling?.textContent || '';
+
+                    lightbox.querySelector('.lightbox-image').src = img.src;
+                    lightbox.querySelector('.lightbox-image').alt = img.alt;
+                    lightbox.querySelector('.lightbox-caption').textContent = caption;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Prevent background scroll
+                });
+            });
+
+            // Close on click outside or close button
+            lightbox.addEventListener('click', (e) => {
+                if (e.target.id === 'image-lightbox' || e.target.classList.contains('lightbox-close')) {
+                    closeLightbox();
+                }
+            });
+
+            // Close on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        });
     </script>
+
+    <!-- Image Lightbox -->
+    <div id="image-lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <div class="lightbox-container">
+            <img class="lightbox-image" src="" alt="">
+            <p class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container" style="padding: 0 20px;">
+            <p>&copy; 2025 Fame Express LLC | San Francisco, CA</p>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a> |
+                <a href="/team.html">Team</a> |
+                <a href="/privacypolicy.html">Privacy Policy</a> |
+                <a href="/terms.html">Terms of Service</a> |
+                <a href="/support.html">Customer Support</a>
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
