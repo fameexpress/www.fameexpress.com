@@ -2322,9 +2322,9 @@
         // =====================================================
         const CONFIG = {
             particles: {
-                baseCount: 20000, // Reduced - enemies are now 3D objects
-                minCount: 10000,
-                maxCount: 30000,
+                baseCount: 10000, // Reduced by half for performance
+                minCount: 5000,
+                maxCount: 15000,
                 species: {
                     spend: { ratio: 0.50, color: [1.0, 0.4, 0.1], turbulence: 0.1 },
                     waste: { ratio: 0.20, color: [1.0, 0.15, 0.15], turbulence: 0.3 },
