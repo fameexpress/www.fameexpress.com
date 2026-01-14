@@ -1,5 +1,2 @@
-Goal: Improve the design and copy of www.fameexpress.com
- 
-* Review the design and copy of https://whatiskumara.com/ and learn from it and generate insights, even though it is in a different industry and target audience compared to Fame Express.
-* Figure out how to apply the newly learned copy and design insights from Kumara to the Fame Express website.
-* We also need to add to our Fame Express website a section that shows what users get and shows screenshots from the Audit done for Neil (report is in google sheets), and also shows screenshots from various screens in the amc.fameexpress.com app (login: nick@fameexpress.com / password: development). We'll want to blur out sensitive data from the screenshots for privacy/confidentiality.
+1. The generated particles all look like they're in a straight line, so we do not get any 3D perception of depth. Can we improve that somehow in an organized way to make it look more like 3D space?
+2. The design of the non-index pages should match our index page.
