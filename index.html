@@ -3450,7 +3450,7 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                 onTouchStart(e) {
                     if (e.target.closest('button, input, select, textarea, label, a, .form-panel')) return;
-                    e.preventDefault();
+                    // Don't prevent default here - let the browser handle scrolling initially
 
                     for (const touch of e.changedTouches) {
                         this.touches[touch.identifier] = {
@@ -3465,15 +3465,17 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                     if (e.touches.length === 2) {
                         this.lastPinchDist = this.getPinchDistance(e.touches);
+                        // Prevent default for pinch gestures
+                        e.preventDefault();
                     }
                 },
 
                 onTouchMove(e) {
                     if (e.target.closest('button, input, select, textarea, label, a, .form-panel')) return;
-                    e.preventDefault();
 
-                    // Pinch detection
+                    // Pinch detection - prevent default for pinch gestures
                     if (e.touches.length === 2) {
+                        e.preventDefault();
                         const dist = this.getPinchDistance(e.touches);
                         if (this.lastPinchDist - dist > 30) {
                             triggerOptimization();
@@ -3483,10 +3485,21 @@ fameexpress.com #AmazonAds #FameExpress`;
                         return;
                     }
 
-                    // Swipe through waste
+                    // Swipe through waste - only prevent default for horizontal swipes
                     for (const touch of e.changedTouches) {
                         const t = this.touches[touch.identifier];
                         if (!t) continue;
+
+                        const deltaX = Math.abs(touch.clientX - t.startX);
+                        const deltaY = Math.abs(touch.clientY - t.startY);
+
+                        // Only prevent default and engage swipe if moving more horizontally than vertically
+                        // This allows vertical scrolling to work normally
+                        const isHorizontalSwipe = deltaX > deltaY && deltaX > 10;
+
+                        if (isHorizontalSwipe) {
+                            e.preventDefault();
+                        }
 
                         t.lastX = touch.clientX;
                         t.lastY = touch.clientY;
@@ -3494,11 +3507,14 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                         if (t.trail.length > 15) t.trail.shift();
 
-                        // Calculate swipe speed
-                        const speed = this.getSwipeSpeed(t);
-                        if (speed > 3) {
-                            this.captureAlongTrail(t.trail);
-                            this.haptic('light');
+                        // Only capture particles if it's a horizontal swipe
+                        if (isHorizontalSwipe) {
+                            // Calculate swipe speed
+                            const speed = this.getSwipeSpeed(t);
+                            if (speed > 3) {
+                                this.captureAlongTrail(t.trail);
+                                this.haptic('light');
+                            }
                         }
                     }
                 },
