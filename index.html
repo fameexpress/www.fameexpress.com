@@ -4891,7 +4891,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                 ViralEngine.Effects.numberPopup(hit.position, points);
 
                 // Update waste detected
-                state.particles.wasteDetected++;
+                const wasteAmount = Math.floor(Math.random() * 2000) + 1000;
+                state.particles.wasteDetected += wasteAmount;
                 state.particles.captureCount++;
                 const wasteEl2 = document.getElementById('waste-amount');
                 if (wasteEl2) wasteEl2.textContent = '$' + state.particles.wasteDetected.toLocaleString();
@@ -5360,7 +5361,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                         ViralEngine.Effects.numberPopup(hit.position, points);
 
                         // Update HUD
-                        state.particles.wasteDetected++;
+                        const wasteAmount = Math.floor(Math.random() * 2000) + 1000;
+                        state.particles.wasteDetected += wasteAmount;
                         state.particles.captureCount++;
                         const wasteEl = document.getElementById('waste-amount');
                         if (wasteEl) wasteEl.textContent = '$' + state.particles.wasteDetected.toLocaleString();
