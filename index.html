@@ -1432,6 +1432,272 @@
                 height: 90px;
             }
         }
+
+        /* =====================================================
+           NEW SECTIONS: What You Get, Case Study, Founder, FAQ
+           ===================================================== */
+
+        /* What You Get Section */
+        .what-you-get-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin-top: 48px;
+            text-align: left;
+        }
+
+        @media (max-width: 900px) {
+            .what-you-get-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .deliverable-column h3 {
+            font-size: 1.3rem;
+            color: #00ffff;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .deliverable-column h3::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #00ffff;
+            border-radius: 50%;
+        }
+
+        .deliverable-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .deliverable-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .deliverable-list li::before {
+            content: '✓';
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .screenshot-frame {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .screenshot-frame:hover {
+            transform: scale(1.02);
+            border-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .screenshot-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 12px;
+        }
+
+        /* Case Study Section */
+        .case-study-section {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, rgba(0, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 24px;
+            padding: 48px;
+            margin-top: 32px;
+        }
+
+        .case-study-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .case-study-header .eyebrow {
+            font-size: 0.85rem;
+            color: #00ff88;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .case-study-stats {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 16px;
+            padding: 24px 32px;
+            text-align: center;
+            min-width: 180px;
+        }
+
+        .stat-card .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00ff88;
+            font-family: 'JetBrains Mono', monospace;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .stat-card.highlight {
+            background: rgba(0, 255, 136, 0.1);
+            border-color: rgba(0, 255, 136, 0.5);
+        }
+
+        .stat-card.highlight .stat-value {
+            font-size: 2.5rem;
+        }
+
+        /* Founder Section */
+        .founder-section {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            text-align: left;
+            margin-top: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .founder-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .founder-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 255, 136, 0.2) 100%);
+            border: 3px solid rgba(0, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            flex-shrink: 0;
+        }
+
+        .founder-bio h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+            color: #ffffff;
+        }
+
+        .founder-bio .founder-title {
+            color: #00ffff;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .founder-bio p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .founder-credentials {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .credential-badge {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 700px;
+            margin: 48px auto 0;
+            text-align: left;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 1.1rem;
+            padding: 24px 0;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            transition: color 0.3s;
+        }
+
+        .faq-question:hover {
+            color: #00ffff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #00ffff;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.7;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 24px;
+        }
     </style>
 </head>
 <body>
@@ -1452,9 +1718,52 @@
         <!-- Chapter 1: Hero -->
         <section id="chapter-1" class="chapter" aria-label="Hero">
             <div class="chapter-content">
-                <h1>Stop Wasting Money on Amazon Ads</h1>
-                <p class="subhead">AI-powered optimization reveals hidden waste and unlocks profit opportunities using SQL-powered AMC analysis</p>
+                <p class="microcopy" style="margin-bottom: 16px; font-size: 1rem;">If you're spending $50K+/month on Amazon Ads but can't prove what's actually working...</p>
+                <h1>There's a Better Way to Optimize Amazon Ads</h1>
+                <p class="subhead">Our AI-powered AMC analysis reveals hidden waste, unlocks growth opportunities, and shows you exactly where your ad dollars should go.</p>
                 <p class="microcopy">No commitment. Results in ~48 hours.</p>
+            </div>
+        </section>
+
+        <!-- NEW: What You Get Section -->
+        <section id="what-you-get" class="chapter" aria-label="What You Get">
+            <div class="chapter-content" style="max-width: 1000px;">
+                <h2>What You Get</h2>
+                <p class="subhead">A comprehensive audit plus ongoing access to powerful analytics</p>
+
+                <div class="what-you-get-grid">
+                    <!-- Audit Deliverables Column -->
+                    <div class="deliverable-column">
+                        <h3>Free Audit Report</h3>
+                        <ul class="deliverable-list">
+                            <li>17+ page comprehensive analysis</li>
+                            <li>Prioritized action plan (Critical/High/Medium)</li>
+                            <li>Wasted spend identification</li>
+                            <li>Incremental sales opportunities</li>
+                            <li>Campaign synergy insights</li>
+                        </ul>
+                        <div class="screenshot-frame">
+                            <img src="assets/screenshots/audit-action-plan.png" alt="Audit Action Plan showing prioritized recommendations" loading="lazy">
+                        </div>
+                        <p class="screenshot-caption">Prioritized action plan with potential value</p>
+                    </div>
+
+                    <!-- Platform Access Column -->
+                    <div class="deliverable-column">
+                        <h3>Platform Access</h3>
+                        <ul class="deliverable-list">
+                            <li>Smart Recommendations dashboard</li>
+                            <li>Multi-touch attribution analysis</li>
+                            <li>Customer journey visualization</li>
+                            <li>Campaign performance tracking</li>
+                            <li>Real-time data updates</li>
+                        </ul>
+                        <div class="screenshot-frame">
+                            <img src="assets/screenshots/amc-smart-recommendations.png" alt="Smart Recommendations Dashboard" loading="lazy">
+                        </div>
+                        <p class="screenshot-caption">AI-powered campaign recommendations</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1475,6 +1784,42 @@
                         <span class="metric-value">Full API</span>
                         <span class="metric-label">Ads + SP + Stream</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: Case Study Section -->
+        <section id="case-study" class="chapter" aria-label="Case Study">
+            <div class="chapter-content" style="max-width: 900px;">
+                <div class="case-study-section">
+                    <div class="case-study-header">
+                        <p class="eyebrow">Real Results</p>
+                        <h2>One Client Discovered $393,646 in Total Optimization Opportunity</h2>
+                    </div>
+
+                    <div class="case-study-stats">
+                        <div class="stat-card highlight">
+                            <span class="stat-value">$393K</span>
+                            <span class="stat-label">Total Opportunity</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">$69K</span>
+                            <span class="stat-label">Wasted Spend</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">$294K</span>
+                            <span class="stat-label">Incremental Sales</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-value">215</span>
+                            <span class="stat-label">Critical Actions</span>
+                        </div>
+                    </div>
+
+                    <div class="screenshot-frame" style="max-width: 700px; margin: 0 auto;">
+                        <img src="assets/screenshots/amc-sankey-chart.png" alt="Customer Journey Flow Analysis" loading="lazy">
+                    </div>
+                    <p class="screenshot-caption">Customer journey flow analysis reveals hidden conversion paths</p>
                 </div>
             </div>
         </section>
@@ -1524,6 +1869,28 @@
             </div>
         </section>
 
+        <!-- NEW: Founder Story Section -->
+        <section id="founder" class="chapter" aria-label="About the Founder">
+            <div class="chapter-content" style="max-width: 900px;">
+                <h2>Built by Someone Who's Been There</h2>
+                <div class="founder-section">
+                    <div class="founder-avatar">AC</div>
+                    <div class="founder-bio">
+                        <h3>Anand Chhatpar</h3>
+                        <p class="founder-title">Founder, Fame Express</p>
+                        <p>With 20+ years as a technical founder, I've learned that sustainable growth comes from data-driven decisions, not guesswork. I built Facebook apps to 20M+ users without paid advertising, then led Mystery Science to become America's #1 elementary science curriculum before its $125M+ acquisition.</p>
+                        <p>Now I'm applying those same growth engineering principles to Amazon advertising. Fame Express was built to give brands the same advanced analytics and AI-powered insights that the biggest advertisers use.</p>
+                        <div class="founder-credentials">
+                            <span class="credential-badge">8 Patents</span>
+                            <span class="credential-badge">a16z Funded</span>
+                            <span class="credential-badge">Reforge Graduate</span>
+                            <span class="credential-badge">20+ Years Tech</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Chapter 5: Qualification -->
         <section id="chapter-5" class="chapter" aria-label="Qualification">
             <div class="chapter-content">
@@ -1545,6 +1912,57 @@
                         <input type="checkbox" id="q4">
                         <span>Have or can get AMC access</span>
                     </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: FAQ Section -->
+        <section id="faq" class="chapter" aria-label="Frequently Asked Questions">
+            <div class="chapter-content" style="max-width: 800px;">
+                <h2>Common Questions</h2>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">How is this different from Amazon's built-in reporting?</button>
+                        <div class="faq-answer">
+                            Amazon's standard reports show basic metrics like clicks and sales. Our AMC-powered analysis reveals the complete customer journey across touchpoints, showing you which campaigns work together, where customers drop off, and where you're wasting money on duplicate impressions. It's the difference between seeing individual puzzle pieces and seeing the whole picture.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">What is AMC and why does it matter?</button>
+                        <div class="faq-answer">
+                            Amazon Marketing Cloud (AMC) is Amazon's advanced analytics platform that lets you run SQL queries against your advertising data at the impression level. This means you can analyze customer journeys, attribution paths, and audience overlaps that are impossible to see in standard reports. Only ~5% of advertisers use AMC effectively.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">How long does the audit take?</button>
+                        <div class="faq-answer">
+                            After our initial 15-minute call and connecting your account (read-only access), our AI generates the analysis within 48 hours. You'll receive a comprehensive report with prioritized recommendations you can act on immediately.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">What happens after I get my audit?</button>
+                        <div class="faq-answer">
+                            You'll have a detailed action plan with specific recommendations prioritized by impact. We'll walk you through the findings and you can implement the changes yourself, have your team do it, or work with us on an ongoing basis for continued optimization.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Is my data secure?</button>
+                        <div class="faq-answer">
+                            Absolutely. We only request read-only access to your advertising data—we can't make changes to your campaigns. Your data is processed securely and never shared with third parties. We take data security as seriously as our own.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">What if I don't have AMC access yet?</button>
+                        <div class="faq-answer">
+                            No problem! If you're spending $50K+/month on Amazon Ads, you likely qualify for AMC access. We can help guide you through the setup process as part of getting started. Most brands can get access within a few days.
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -1580,6 +1998,7 @@
                             <label for="monthly-spend">Monthly Amazon Ads Spend *</label>
                             <select id="monthly-spend" name="Monthly Amazon Ads Spend" required>
                                 <option value="">Select your monthly spend</option>
+                                <option value="$1K - $50K">$1K - $50K</option>
                                 <option value="$50K - $100K">$50K - $100K</option>
                                 <option value="$100K - $250K">$100K - $250K</option>
                                 <option value="$250K - $500K">$250K - $500K</option>
@@ -5186,6 +5605,24 @@ fameexpress.com #AmazonAds #FameExpress`;
 
         // Run on load
         window.addEventListener('load', init);
+
+        // FAQ Accordion Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Toggle current item
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
