@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fame Express | AI-Powered Amazon Ads Optimization | Free Audit</title>
@@ -1811,6 +1819,11 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <!-- =====================================================
          CANVAS CONTAINER
          ===================================================== -->
@@ -4506,8 +4519,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                     // Stream flow
                     vx += (CONFIG.physics.streamSpeed - vx) * 0.01;
 
-                    // Gentle cohesion to center
-                    vy += -y * CONFIG.physics.cohesion * 0.5;
+                    // Removed Y cohesion to maintain 3D spread
+                    // vy += -y * CONFIG.physics.cohesion * 0.5;
 
                     // Subtle turbulence for visual interest
                     if (!state.accessibility.reduceMotion) {
@@ -4528,14 +4541,14 @@ fameexpress.com #AmazonAds #FameExpress`;
                     // Wrap around
                     if (x > streamWidth) {
                         x = -streamWidth;
-                        y = (Math.random() - 0.5) * 200;
+                        y = (Math.random() - 0.5) * 500;  // Full vertical spread for 3D effect
                         z = -800 + Math.random() * 700;  // Stay in background - EXPANDED DEPTH
                     } else if (x < -streamWidth) {
                         x = streamWidth;
                     }
 
-                    // Clamp Y and Z - keep in BACKGROUND
-                    y = Math.max(-150, Math.min(150, y));
+                    // Clamp Y and Z - keep in BACKGROUND with full vertical spread
+                    y = Math.max(-250, Math.min(250, y));  // Increased range for 3D depth
                     z = Math.max(-800, Math.min(-100, z));  // Background layer only - EXPANDED DEPTH
 
                     // Store
@@ -4735,7 +4748,7 @@ fameexpress.com #AmazonAds #FameExpress`;
             }
 
             camera.position.lerp(target, 0.03);
-            camera.lookAt(0, -30, -200); // Looking down at particles
+            camera.lookAt(0, 0, -200); // Top-down view at particles
         }
 
         // =====================================================
@@ -5530,8 +5543,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                 1,
                 1000
             );
-            camera.position.set(0, 100, 400); // Raised camera to look down
-            camera.lookAt(0, -30, -200); // Looking down at particles
+            camera.position.set(0, 250, 400); // Raised camera to look down at higher angle
+            camera.lookAt(0, 0, -200); // Top-down view at particles
 
             // Renderer
             const canvas = document.getElementById('main-canvas');
