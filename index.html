@@ -2335,9 +2335,9 @@
         // =====================================================
         const CONFIG = {
             particles: {
-                baseCount: 20000, // Reduced - enemies are now 3D objects
-                minCount: 10000,
-                maxCount: 30000,
+                baseCount: 10000, // Reduced by half for performance
+                minCount: 5000,
+                maxCount: 15000,
                 species: {
                     spend: { ratio: 0.50, color: [1.0, 0.4, 0.1], turbulence: 0.1 },
                     waste: { ratio: 0.20, color: [1.0, 0.15, 0.15], turbulence: 0.3 },
@@ -3463,7 +3463,7 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                 onTouchStart(e) {
                     if (e.target.closest('button, input, select, textarea, label, a, .form-panel')) return;
-                    e.preventDefault();
+                    // Don't prevent default here - let the browser handle scrolling initially
 
                     for (const touch of e.changedTouches) {
                         this.touches[touch.identifier] = {
@@ -3478,15 +3478,17 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                     if (e.touches.length === 2) {
                         this.lastPinchDist = this.getPinchDistance(e.touches);
+                        // Prevent default for pinch gestures
+                        e.preventDefault();
                     }
                 },
 
                 onTouchMove(e) {
                     if (e.target.closest('button, input, select, textarea, label, a, .form-panel')) return;
-                    e.preventDefault();
 
-                    // Pinch detection
+                    // Pinch detection - prevent default for pinch gestures
                     if (e.touches.length === 2) {
+                        e.preventDefault();
                         const dist = this.getPinchDistance(e.touches);
                         if (this.lastPinchDist - dist > 30) {
                             triggerOptimization();
@@ -3496,10 +3498,21 @@ fameexpress.com #AmazonAds #FameExpress`;
                         return;
                     }
 
-                    // Swipe through waste
+                    // Swipe through waste - only prevent default for horizontal swipes
                     for (const touch of e.changedTouches) {
                         const t = this.touches[touch.identifier];
                         if (!t) continue;
+
+                        const deltaX = Math.abs(touch.clientX - t.startX);
+                        const deltaY = Math.abs(touch.clientY - t.startY);
+
+                        // Only prevent default and engage swipe if moving more horizontally than vertically
+                        // This allows vertical scrolling to work normally
+                        const isHorizontalSwipe = deltaX > deltaY && deltaX > 10;
+
+                        if (isHorizontalSwipe) {
+                            e.preventDefault();
+                        }
 
                         t.lastX = touch.clientX;
                         t.lastY = touch.clientY;
@@ -3507,11 +3520,14 @@ fameexpress.com #AmazonAds #FameExpress`;
 
                         if (t.trail.length > 15) t.trail.shift();
 
-                        // Calculate swipe speed
-                        const speed = this.getSwipeSpeed(t);
-                        if (speed > 3) {
-                            this.captureAlongTrail(t.trail);
-                            this.haptic('light');
+                        // Only capture particles if it's a horizontal swipe
+                        if (isHorizontalSwipe) {
+                            // Calculate swipe speed
+                            const speed = this.getSwipeSpeed(t);
+                            if (speed > 3) {
+                                this.captureAlongTrail(t.trail);
+                                this.haptic('light');
+                            }
                         }
                     }
                 },
@@ -4888,7 +4904,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                 ViralEngine.Effects.numberPopup(hit.position, points);
 
                 // Update waste detected
-                state.particles.wasteDetected++;
+                const wasteAmount = Math.floor(Math.random() * 2000) + 1000;
+                state.particles.wasteDetected += wasteAmount;
                 state.particles.captureCount++;
                 const wasteEl2 = document.getElementById('waste-amount');
                 if (wasteEl2) wasteEl2.textContent = '$' + state.particles.wasteDetected.toLocaleString();
@@ -5357,7 +5374,8 @@ fameexpress.com #AmazonAds #FameExpress`;
                         ViralEngine.Effects.numberPopup(hit.position, points);
 
                         // Update HUD
-                        state.particles.wasteDetected++;
+                        const wasteAmount = Math.floor(Math.random() * 2000) + 1000;
+                        state.particles.wasteDetected += wasteAmount;
                         state.particles.captureCount++;
                         const wasteEl = document.getElementById('waste-amount');
                         if (wasteEl) wasteEl.textContent = '$' + state.particles.wasteDetected.toLocaleString();
