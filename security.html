@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & Data Privacy | Fame Express</title>
+    <meta name="description" content="How Fame Express handles your Amazon Ads data. Read-only access, no data selling, TLS encryption, and a commitment to SOC 2 Type II compliance.">
+    <meta name="keywords" content="fame express security, data privacy, amazon ads data, secure analytics, soc 2">
+    <link rel="canonical" href="https://www.fameexpress.com/security.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Security & Data Privacy | Fame Express">
+    <meta property="og:description" content="We take your data seriously. Read-only access, no data selling, encrypted in transit, and enterprise-grade security practices.">
+    <meta property="og:url" content="https://www.fameexpress.com/security.html">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           RESET & BASE
+           ===================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        /* =====================================================
+           BACKGROUND LAYERS
+           ===================================================== */
+        .grid-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.4) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: center center;
+        }
+
+        @keyframes gridMove {
+            0%   { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .scanlines::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0px,
+                transparent 2px,
+                rgba(0, 0, 0, 0.06) 2px,
+                rgba(0, 0, 0, 0.06) 4px
+            );
+            animation: scanlineMove 10s linear infinite;
+        }
+
+        @keyframes scanlineMove {
+            0%   { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(
+                ellipse at center,
+                transparent 0%,
+                transparent 50%,
+                rgba(0, 0, 0, 0.4) 80%,
+                rgba(0, 0, 0, 0.7) 100%
+            );
+        }
+
+        /* =====================================================
+           LAYOUT
+           ===================================================== */
+        .page-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: clamp(60px, 8vw, 100px) 0;
+        }
+
+        /* =====================================================
+           NAV
+           ===================================================== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #00ffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-cta {
+            display: inline-block;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+        }
+
+        /* =====================================================
+           TYPOGRAPHY UTILITIES
+           ===================================================== */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .accent { color: #00ffff; }
+        .accent-green { color: #00ff88; }
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+        #hero {
+            padding: clamp(80px, 10vw, 120px) 0 clamp(60px, 8vw, 80px);
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 6px 18px;
+            margin-bottom: 32px;
+        }
+
+        #hero h1 {
+            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+
+        .hero-subhead {
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           TRUST SUMMARY STRIP
+           ===================================================== */
+        #trust-strip {
+            padding: 0 0 clamp(50px, 7vw, 80px);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+        }
+
+        .trust-chip {
+            background: rgba(0, 255, 136, 0.06);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-align: center;
+        }
+
+        .trust-chip-icon {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .trust-chip-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: #00ff88;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* =====================================================
+           SECTION HEADERS
+           ===================================================== */
+        .section-title {
+            font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            margin-bottom: 48px;
+            max-width: 560px;
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           SECURITY CARDS
+           ===================================================== */
+        #principles {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .principle-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .principle-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 28px 32px;
+            display: grid;
+            grid-template-columns: 52px 1fr;
+            gap: 20px;
+            align-items: start;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .principle-card:hover {
+            border-color: rgba(0, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .principle-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .principle-body h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .principle-body p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        .principle-body p strong {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* =====================================================
+           AMAZON SECTION
+           ===================================================== */
+        #amazon-section {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        .amazon-card {
+            background: rgba(255, 153, 0, 0.05);
+            border: 1px solid rgba(255, 153, 0, 0.2);
+            border-radius: 16px;
+            padding: 36px 40px;
+        }
+
+        .amazon-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #FF9900;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .amazon-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .amazon-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .amazon-card p strong {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* =====================================================
+           COMPLIANCE SECTION
+           ===================================================== */
+        #compliance {
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        .compliance-card {
+            background: rgba(0, 255, 255, 0.04);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 16px;
+            padding: 36px 40px;
+        }
+
+        .compliance-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #00ffff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .compliance-card p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 14px;
+        }
+
+        .compliance-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .compliance-card p strong {
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        /* =====================================================
+           CONTACT SECTION
+           ===================================================== */
+        #contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 20px;
+            padding: 48px 40px;
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .contact-box h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .contact-box p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .contact-email {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            color: #00ff88;
+            text-decoration: none;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-radius: 30px;
+            padding: 10px 28px;
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .contact-email:hover {
+            background: rgba(0, 255, 136, 0.08);
+            border-color: rgba(0, 255, 136, 0.6);
+        }
+
+        /* =====================================================
+           BUTTONS
+           ===================================================== */
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 44px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 0.9rem;
+            margin-bottom: 70px;
+            padding-bottom: 80px;
+        }
+
+        footer a {
+            color: #FF9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =====================================================
+           STICKY CTA
+           ===================================================== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 500;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(0, 255, 255, 0.15);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-cta-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.55);
+            display: none;
+        }
+
+        @media (min-width: 500px) {
+            .sticky-cta-text {
+                display: block;
+            }
+        }
+
+        .sticky-cta .btn-primary {
+            padding: 13px 32px;
+            font-size: 0.85rem;
+        }
+
+        /* =====================================================
+           MOBILE RESPONSIVE
+           ===================================================== */
+        @media (max-width: 768px) {
+            .principle-card {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .amazon-card,
+            .compliance-card {
+                padding: 24px 20px;
+            }
+
+            .contact-box {
+                padding: 32px 24px;
+            }
+
+            section {
+                padding: clamp(40px, 6vw, 60px) 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trust-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Background Effects -->
+    <div class="grid-bg"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <div class="page-wrapper">
+
+        <!-- NAV -->
+        <nav>
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">FAME EXPRESS</a>
+                <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="nav-cta">Book a Demo</a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-eyebrow">Security &amp; Privacy</div>
+                <h1>How We Handle<br><span class="gradient-text">Your Data</span></h1>
+                <p class="hero-subhead">
+                    Your advertising data is sensitive. We treat it that way — with strict
+                    read-only access, no data selling, and enterprise-grade security practices
+                    at every step.
+                </p>
+            </div>
+        </section>
+
+        <!-- TRUST STRIP -->
+        <section id="trust-strip">
+            <div class="container">
+                <div class="trust-grid">
+                    <div class="trust-chip">
+                        <div class="trust-chip-icon">🔒</div>
+                        <div class="trust-chip-label">Read-Only Access</div>
+                    </div>
+                    <div class="trust-chip">
+                        <div class="trust-chip-icon">🚫</div>
+                        <div class="trust-chip-label">No Data Selling</div>
+                    </div>
+                    <div class="trust-chip">
+                        <div class="trust-chip-icon">🔐</div>
+                        <div class="trust-chip-label">TLS 1.2+ Encrypted</div>
+                    </div>
+                    <div class="trust-chip">
+                        <div class="trust-chip-icon">🏛️</div>
+                        <div class="trust-chip-label">SOC 2 Roadmap</div>
+                    </div>
+                    <div class="trust-chip">
+                        <div class="trust-chip-icon">🗑️</div>
+                        <div class="trust-chip-label">Deleted on Request</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CORE PRINCIPLES -->
+        <section id="principles">
+            <div class="container">
+                <h2 class="section-title">Our Security <span class="accent">Commitments</span></h2>
+                <p class="section-subtitle">
+                    These are the specific, concrete practices we follow when handling your
+                    Amazon Ads data — no vague promises.
+                </p>
+
+                <div class="principle-list">
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🔑</div>
+                        <div class="principle-body">
+                            <h3>Read-Only Access — Always</h3>
+                            <p>
+                                We only request <strong>read-only access</strong> to your advertising data.
+                                We cannot make changes to your campaigns, budgets, bids, or any other settings.
+                                Our access is scoped to read your performance data and AMC signals — nothing more.
+                                You remain in full control of your account at all times.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🏢</div>
+                        <div class="principle-body">
+                            <h3>Your Data Is Never Shared</h3>
+                            <p>
+                                Your data is <strong>processed securely and never shared with third parties</strong>.
+                                We do not share, sell, license, or otherwise transfer your advertising data
+                                to any external parties, partners, or platforms — under any circumstances.
+                                Your competitive data stays yours.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🚫</div>
+                        <div class="principle-body">
+                            <h3>We Never Sell Your Data</h3>
+                            <p>
+                                We <strong>never sell, share, or use your data for any purpose other than
+                                generating your analysis</strong>. Your data is not used to train models,
+                                benchmark against other clients, or generate insights for anyone other than you.
+                                Full stop.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🔐</div>
+                        <div class="principle-body">
+                            <h3>Encrypted in Transit</h3>
+                            <p>
+                                <strong>All access is authenticated and encrypted in transit using TLS 1.2+.</strong>
+                                Data flowing between Amazon's APIs, our analysis infrastructure, and our
+                                reporting systems is protected with industry-standard transport layer security.
+                                We do not transmit your data over unencrypted channels.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🗑️</div>
+                        <div class="principle-body">
+                            <h3>Data Retention &amp; Deletion</h3>
+                            <p>
+                                Your data is <strong>retained only for the duration of our engagement</strong>.
+                                Once our work together concludes, your data is deleted from our systems.
+                                If you need your data deleted sooner, just ask — we will honor deletion
+                                requests promptly, no questions asked.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- AMAZON PARTNERSHIP -->
+        <section id="amazon-section">
+            <div class="container">
+                <h2 class="section-title">Working Within Amazon's <span class="accent">Official Frameworks</span></h2>
+                <p class="section-subtitle">
+                    We don't use workarounds or unofficial scraping. Our data access is fully
+                    sanctioned and operates within Amazon's published API guidelines.
+                </p>
+
+                <div class="amazon-card">
+                    <h3>🟠 Amazon API &amp; AMC Partner</h3>
+                    <p>
+                        Fame Express operates exclusively within <strong>Amazon's official Advertising API
+                        and Amazon Marketing Cloud (AMC) frameworks</strong>. This means our access to your
+                        data is governed by Amazon's own security, authentication, and compliance requirements
+                        — providing an additional layer of oversight beyond our own practices.
+                    </p>
+                    <p>
+                        AMC is a privacy-safe, cloud-based clean room solution provided and operated by Amazon.
+                        All queries run inside Amazon's infrastructure. We receive aggregated outputs —
+                        never raw user-level data — in strict compliance with Amazon's data use policies.
+                    </p>
+                    <p>
+                        When you grant us access, you're using the same OAuth mechanisms Amazon provides
+                        to all verified advertising partners. You can <strong>revoke our access at any time</strong>
+                        directly from your Amazon Advertising account settings.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPLIANCE -->
+        <section id="compliance">
+            <div class="container">
+                <h2 class="section-title">Our <span class="accent">Compliance Roadmap</span></h2>
+                <p class="section-subtitle">
+                    We're a focused expert team, not a sprawling enterprise. Here's where
+                    we are and where we're headed.
+                </p>
+
+                <div class="compliance-card">
+                    <h3>🏛️ Working Toward SOC 2 Type II</h3>
+                    <p>
+                        We are actively working toward <strong>SOC 2 Type II certification</strong>,
+                        which will provide independent, third-party validation of our security controls,
+                        availability, and data handling practices. This is a deliberate investment in
+                        enterprise trust infrastructure.
+                    </p>
+                    <p>
+                        In the meantime, we follow the principles of SOC 2 Trust Services Criteria —
+                        including access control, monitoring, incident response, and change management —
+                        as operating standards within our team.
+                    </p>
+                    <p>
+                        If your organization has specific security questionnaire requirements or vendor
+                        review processes, we're happy to <strong>work through them with you directly</strong>.
+                        Reach out to <a href="mailto:anand@fameexpress.com" style="color: #00ffff; text-decoration: none;">anand@fameexpress.com</a>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h3>Security Questions?</h3>
+                    <p>
+                        If you have questions about our data handling practices, want to discuss
+                        your organization's security requirements, or need to submit a data deletion
+                        request — contact us directly.
+                    </p>
+                    <a href="mailto:anand@fameexpress.com" class="contact-email">anand@fameexpress.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section id="final-cta" style="text-align: center; background: rgba(0,0,0,0.2);">
+            <div class="container">
+                <h2 class="section-title">Ready to Get Started?</h2>
+                <p style="color: rgba(255,255,255,0.6); margin-bottom: 36px; font-size: 1rem; line-height: 1.65;">
+                    We're built for brands and agencies that take their data seriously.
+                    Let's show you what's hiding in your Amazon Ads data — securely.
+                </p>
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 14px;">
+                    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary">
+                        Book a Free Demo
+                    </a>
+                    <span style="font-size: 0.85rem; color: rgba(255,255,255,0.4);">
+                        No contract, no commitment — just insight.
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Fame Express LLC | San Francisco, CA</p>
+                <p style="margin-top: 10px;">
+                    <a href="/">Home</a> |
+                    <a href="/pricing.html">Pricing</a> |
+                    <a href="/privacypolicy.html">Privacy Policy</a> |
+                    <a href="/security.html">Security</a> |
+                    <a href="/terms.html">Terms of Service</a> |
+                    <a href="/support.html">Customer Support</a>
+                </p>
+            </div>
+        </footer>
+
+    </div><!-- /.page-wrapper -->
+
+    <!-- STICKY BOTTOM CTA -->
+    <div class="sticky-cta">
+        <span class="sticky-cta-text">Enterprise-grade security — read-only, encrypted, never sold</span>
+        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary">
+            Book a Demo
+        </a>
+    </div>
+
+</body>
+</html>
