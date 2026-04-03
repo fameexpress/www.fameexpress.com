@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Fame Express — Flat-Fee Amazon Ads Optimization</title>
+    <meta name="description" content="Fame Express pricing: flat fees, not a percentage of your ad spend. Our incentives are aligned with yours — reduce waste, grow sales. Free audit to start.">
+    <meta name="keywords" content="amazon ads pricing, amazon advertising cost, fame express pricing, flat fee amazon ads, amazon ads optimization pricing">
+    <link rel="canonical" href="https://www.fameexpress.com/pricing.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Pricing | Fame Express — Flat-Fee Amazon Ads Optimization">
+    <meta property="og:description" content="No percentage of ad spend. Flat fees aligned with your goal: reduce waste and grow sales. Free audit to start.">
+    <meta property="og:url" content="https://www.fameexpress.com/pricing.html">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           RESET & BASE
+           ===================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            overflow-x: hidden;
+            padding-bottom: 80px;
+        }
+
+        /* =====================================================
+           BACKGROUND LAYERS
+           ===================================================== */
+        .grid-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.4) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: center center;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(
+                ellipse at center,
+                transparent 0%,
+                transparent 50%,
+                rgba(0, 0, 0, 0.4) 80%,
+                rgba(0, 0, 0, 0.7) 100%
+            );
+        }
+
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .scanlines::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0px, transparent 2px,
+                rgba(0, 0, 0, 0.08) 2px, rgba(0, 0, 0, 0.08) 4px
+            );
+            animation: scanlineMove 10s linear infinite;
+        }
+
+        @keyframes scanlineMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
+
+        /* =====================================================
+           LAYOUT
+           ===================================================== */
+        .page-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 48px);
+        }
+
+        .container-wide {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 48px);
+        }
+
+        section {
+            padding: clamp(60px, 8vw, 100px) 0;
+        }
+
+        /* =====================================================
+           TYPOGRAPHY
+           ===================================================== */
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* =====================================================
+           NAV
+           ===================================================== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            padding: 16px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 48px);
+        }
+
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #00ffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-logo span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-cta {
+            display: inline-block;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.45);
+        }
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+        #hero {
+            padding: clamp(80px, 10vw, 120px) 0 clamp(60px, 8vw, 90px);
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 6px 18px;
+            margin-bottom: 28px;
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        #hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subhead {
+            font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 660px;
+            margin: 0 auto 0;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           SECTION HELPERS
+           ===================================================== */
+        .section-label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ffff;
+            margin-bottom: 12px;
+        }
+
+        .section-title-block {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 12px;
+            line-height: 1.65;
+        }
+
+        .text-center { text-align: center; }
+
+        /* =====================================================
+           PRICING CARDS
+           ===================================================== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+            align-items: start;
+        }
+
+        .pricing-card {
+            border-radius: 20px;
+            padding: clamp(28px, 4vw, 40px);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .pricing-card.standard {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .pricing-card.standard:hover {
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+
+        .pricing-card.featured {
+            background: rgba(0, 255, 136, 0.05);
+            border: 2px solid rgba(0, 255, 136, 0.35);
+            box-shadow: 0 0 50px rgba(0, 255, 136, 0.08);
+        }
+
+        .pricing-card.featured:hover {
+            border-color: rgba(0, 255, 136, 0.55);
+            box-shadow: 0 0 60px rgba(0, 255, 136, 0.12);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 20px;
+            border-radius: 30px;
+            white-space: nowrap;
+        }
+
+        .pricing-card-header {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .pricing-tier-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+
+        .pricing-tier-price {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: #ffffff;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .pricing-tier-price .price-note {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .pricing-tier-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .pricing-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            flex: 1;
+            margin-bottom: 28px;
+        }
+
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.5;
+        }
+
+        .pricing-features li .check {
+            color: #00ff88;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pricing-card .btn-primary,
+        .pricing-card .btn-secondary {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 16px 24px;
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .pricing-card .btn-primary {
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            box-shadow: 0 6px 30px rgba(0, 255, 136, 0.4);
+        }
+
+        .pricing-card .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.55);
+        }
+
+        .pricing-card .btn-secondary {
+            background: rgba(0, 255, 255, 0.08);
+            border: 1px solid rgba(0, 255, 255, 0.25);
+            color: #00ffff;
+        }
+
+        .pricing-card .btn-secondary:hover {
+            transform: translateY(-2px);
+            background: rgba(0, 255, 255, 0.12);
+            border-color: rgba(0, 255, 255, 0.4);
+        }
+
+        /* =====================================================
+           COST COMPARISON
+           ===================================================== */
+        #cost-comparison {
+            background: rgba(0, 255, 255, 0.02);
+            border-top: 1px solid rgba(0, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+        }
+
+        .compare-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .compare-col {
+            border-radius: 20px;
+            padding: clamp(24px, 4vw, 40px);
+        }
+
+        .compare-col.them {
+            background: rgba(255, 68, 68, 0.05);
+            border: 1px solid rgba(255, 68, 68, 0.2);
+        }
+
+        .compare-col.us {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.06);
+        }
+
+        .compare-col-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .compare-col.them .compare-col-label {
+            color: #ff6666;
+        }
+
+        .compare-col.us .compare-col-label {
+            color: #00ff88;
+        }
+
+        .compare-col h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: #fff;
+        }
+
+        .compare-col p {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+        }
+
+        .compare-col .cost-example {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            font-weight: 700;
+            display: block;
+            margin-top: 16px;
+            line-height: 1.3;
+        }
+
+        .compare-col.them .cost-example {
+            color: #ff6666;
+        }
+
+        .compare-col.us .cost-example {
+            color: #00ff88;
+        }
+
+        .compare-note {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.45);
+            font-style: italic;
+        }
+
+        /* =====================================================
+           HOW IT WORKS
+           ===================================================== */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 24px 16px;
+        }
+
+        .step-number {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #00ffff;
+            margin: 0 auto 16px;
+        }
+
+        .step-card h3 {
+            font-size: 1rem;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* =====================================================
+           ALIGNMENT SECTION
+           ===================================================== */
+        .alignment-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .alignment-card {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: clamp(20px, 3vw, 32px);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .alignment-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 255, 255, 0.45);
+        }
+
+        .alignment-icon {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .alignment-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .alignment-card p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           FAQ
+           ===================================================== */
+        .faq-list {
+            margin-top: 48px;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 24px 0;
+        }
+
+        .faq-item:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .faq-question {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            cursor: pointer;
+            background: none;
+            border: none;
+            text-align: left;
+            width: 100%;
+            padding: 0;
+            font-family: inherit;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: #00ffff;
+            flex-shrink: 0;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        .faq-answer p {
+            padding-top: 16px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           CTA BOX
+           ===================================================== */
+        .cta-box {
+            background: rgba(0, 255, 136, 0.04);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 24px;
+            padding: clamp(40px, 6vw, 72px) clamp(24px, 4vw, 60px);
+            max-width: 680px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-box p {
+            margin-bottom: 36px;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .cta-box .btn-primary {
+            display: inline-block;
+            padding: 18px 44px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 30px rgba(0, 255, 136, 0.4);
+        }
+
+        .cta-box .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.55);
+        }
+
+        .cta-trust {
+            margin-top: 20px;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.35);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* =====================================================
+           STICKY CTA
+           ===================================================== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 300;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-cta-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.55);
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .sticky-cta-text {
+                display: block;
+            }
+        }
+
+        .sticky-cta-btn {
+            display: inline-block;
+            padding: 13px 36px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.35);
+            white-space: nowrap;
+        }
+
+        .sticky-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 255, 136, 0.5);
+        }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 0.9rem;
+            margin-top: 0;
+            padding-bottom: 80px;
+        }
+
+        footer a {
+            color: #FF9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =====================================================
+           MOBILE RESPONSIVE
+           ===================================================== */
+        @media (max-width: 900px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 480px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .alignment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 48px 0;
+            }
+
+            .compare-box {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h1, h2, .hero h1, .hero-title, [class*="hero"] h1 {
+                word-break: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+                font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+            }
+
+            .hero p, .hero-subtitle, [class*="hero"] p, .subhead {
+                overflow-wrap: break-word;
+                word-break: break-word;
+                padding: 0 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .pricing-card .btn-primary,
+            .pricing-card .btn-secondary {
+                padding: 14px 20px;
+            }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+            }
+
+            .sticky-cta {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 16px;
+            }
+
+            .sticky-cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .container,
+            .container-wide {
+                padding: 0 16px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Background layers -->
+    <div class="grid-bg"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Fame Express <span>/ Pricing</span></a>
+            <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="nav-cta" target="_blank" rel="noopener">Book a Demo</a>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+
+        <!-- ================================================
+             HERO
+             ================================================ -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-eyebrow">Pricing</div>
+                <h1>We Don't Take a Cut of Your Ad Spend</h1>
+                <p class="hero-subhead">
+                    Most platforms charge 3&ndash;5% of your ad spend. The more you spend, the more they make &mdash; even if it's wasted.
+                    We charge flat fees because our goal is the same as yours: <strong style="color: #00ff88;">spend less, sell more.</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- ================================================
+             PRICING TIERS
+             ================================================ -->
+        <section id="pricing">
+            <div class="container-wide">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Plans</span>
+                    <h2>Simple, Transparent Pricing</h2>
+                    <p class="section-subtitle">Start with a free audit. Scale up when you're ready &mdash; no contracts, no percentage fees.</p>
+                </div>
+
+                <div class="pricing-grid">
+
+                    <!-- Free Audit -->
+                    <div class="pricing-card standard">
+                        <div class="pricing-card-header">
+                            <div class="pricing-tier-name">Free Audit</div>
+                            <div class="pricing-tier-price">$0</div>
+                            <div class="pricing-tier-desc">No strings attached</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span class="check">&#10003;</span> <span>17+ page comprehensive audit report</span></li>
+                            <li><span class="check">&#10003;</span> <span>Wasted spend identification</span></li>
+                            <li><span class="check">&#10003;</span> <span>Growth opportunities mapped out</span></li>
+                            <li><span class="check">&#10003;</span> <span>Prioritized action plan (Critical / High / Medium)</span></li>
+                            <li><span class="check">&#10003;</span> <span>Walkthrough call to review findings</span></li>
+                            <li><span class="check">&#10003;</span> <span>Delivered in ~48 hours</span></li>
+                        </ul>
+                        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-secondary" target="_blank" rel="noopener">Get Free Audit</a>
+                    </div>
+
+                    <!-- Growth -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-card-header">
+                            <div class="pricing-tier-name">Growth</div>
+                            <div class="pricing-tier-price">Custom <span class="price-note">/ flat monthly fee</span></div>
+                            <div class="pricing-tier-desc">For brands ready to act on the findings</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span class="check">&#10003;</span> <span>Everything in Free Audit</span></li>
+                            <li><span class="check">&#10003;</span> <span>Ongoing campaign optimization</span></li>
+                            <li><span class="check">&#10003;</span> <span>Amazon Marketing Cloud insights dashboard</span></li>
+                            <li><span class="check">&#10003;</span> <span>See which ads actually drive sales</span></li>
+                            <li><span class="check">&#10003;</span> <span>Customer journey analysis</span></li>
+                            <li><span class="check">&#10003;</span> <span>Monthly strategy reviews</span></li>
+                            <li><span class="check">&#10003;</span> <span>Flat fee &mdash; never a % of ad spend</span></li>
+                        </ul>
+                        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
+                    </div>
+
+                    <!-- Enterprise -->
+                    <div class="pricing-card standard">
+                        <div class="pricing-card-header">
+                            <div class="pricing-tier-name">Enterprise</div>
+                            <div class="pricing-tier-price">Custom <span class="price-note">/ flat monthly fee</span></div>
+                            <div class="pricing-tier-desc">For large brands with complex needs</div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><span class="check">&#10003;</span> <span>Everything in Growth</span></li>
+                            <li><span class="check">&#10003;</span> <span>Multi-marketplace support</span></li>
+                            <li><span class="check">&#10003;</span> <span>Custom analysis for your specific questions</span></li>
+                            <li><span class="check">&#10003;</span> <span>Dedicated account strategist</span></li>
+                            <li><span class="check">&#10003;</span> <span>Priority support &amp; faster turnaround</span></li>
+                            <li><span class="check">&#10003;</span> <span>Flat fee &mdash; never a % of ad spend</span></li>
+                        </ul>
+                        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-secondary" target="_blank" rel="noopener">Contact Us</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             COST COMPARISON
+             ================================================ -->
+        <section id="cost-comparison">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">The Math</span>
+                    <h2>How Much Are You Really Paying?</h2>
+                    <p class="section-subtitle">Most Amazon ad platforms charge a percentage of your ad spend. Here's what that actually costs you.</p>
+                </div>
+
+                <div class="compare-box">
+
+                    <div class="compare-col them">
+                        <span class="compare-col-label">Typical Platform</span>
+                        <h3>% of Ad Spend Model</h3>
+                        <p>Platforms like Pacvue, Perpetua, and Intentwise typically charge 3&ndash;5% of your monthly ad spend, plus platform fees.</p>
+                        <p>The more you spend, the more they make &mdash; even if that spend is wasted.</p>
+                        <span class="cost-example">On $500K/mo ad spend:<br>$15,000 &ndash; $25,000/mo<br><span style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">just for software access</span></span>
+                    </div>
+
+                    <div class="compare-col us">
+                        <span class="compare-col-label">Fame Express</span>
+                        <h3>Flat Fee Model</h3>
+                        <p>We charge a predictable flat fee. Your cost doesn't go up as your ad spend grows.</p>
+                        <p>Our incentive is to make your ad spend <em>more efficient</em> &mdash; not bigger.</p>
+                        <span class="cost-example">Flat monthly fee<br>regardless of ad spend<br><span style="font-size: 0.75rem; color: rgba(0, 255, 136, 0.7);">aligned with your success</span></span>
+                    </div>
+
+                </div>
+
+                <p class="compare-note">We're trying to bring <em>down</em> your ad spend while increasing your sales. That's why flat pricing makes sense.</p>
+            </div>
+        </section>
+
+        <!-- ================================================
+             WHY FLAT FEES
+             ================================================ -->
+        <section id="alignment">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Better Aligned</span>
+                    <h2>Why Flat Fees Matter</h2>
+                    <p class="section-subtitle">When your optimization partner profits from higher spend, whose side are they really on?</p>
+                </div>
+
+                <div class="alignment-grid">
+
+                    <div class="alignment-card">
+                        <span class="alignment-icon">&#127919;</span>
+                        <h3>Aligned Incentives</h3>
+                        <p>We succeed when you reduce waste and grow sales. We have no reason to inflate your ad spend &mdash; and every reason to cut it.</p>
+                    </div>
+
+                    <div class="alignment-card">
+                        <span class="alignment-icon">&#128202;</span>
+                        <h3>Predictable Costs</h3>
+                        <p>Your optimization costs don't spike during peak seasons or as you scale. Budget with confidence, every month.</p>
+                    </div>
+
+                    <div class="alignment-card">
+                        <span class="alignment-icon">&#128176;</span>
+                        <h3>Real Savings Add Up</h3>
+                        <p>If you're spending $500K/mo and we save you 15% in waste, that's $75K/mo back in your pocket &mdash; not ours.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             HOW IT WORKS
+             ================================================ -->
+        <section id="how-it-works">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Getting Started</span>
+                    <h2>How the Free Audit Works</h2>
+                    <p class="section-subtitle">No commitment required. See the value before you decide.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h3>Book a Call</h3>
+                        <p>15-minute intro to understand your goals</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h3>Connect Account</h3>
+                        <p>Read-only access &mdash; we can't change anything</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h3>We Analyze</h3>
+                        <p>AI-powered deep analysis of your data</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h3>Get Your Report</h3>
+                        <p>17+ pages of findings in ~48 hours</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             FAQ
+             ================================================ -->
+        <section id="faq">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Questions</span>
+                    <h2>Pricing FAQ</h2>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Is the free audit actually free? What's the catch?</button>
+                        <div class="faq-answer">
+                            <p>There's no catch. You get a full 17+ page audit with specific findings for your account &mdash; wasted spend, growth opportunities, and a prioritized action plan. It's not a teaser or a sales pitch disguised as a report. We do this because seeing real data is the best way to show what we can do.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Why don't you charge a percentage of ad spend like everyone else?</button>
+                        <div class="faq-answer">
+                            <p>Because that model creates a conflict of interest. If we charge a percentage, we make more money when you spend more &mdash; even if that spending is wasteful. We want to help you spend <em>less</em> and sell <em>more</em>. A flat fee keeps our incentives aligned with yours.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Can I implement the audit findings myself?</button>
+                        <div class="faq-answer">
+                            <p>Absolutely. The audit is yours to keep and act on however you choose. Many brands implement changes themselves or with their existing team. If you want ongoing help, that's what the Growth and Enterprise plans are for &mdash; but there's zero pressure.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Are there long-term contracts?</button>
+                        <div class="faq-answer">
+                            <p>No. Paid plans are month-to-month. We earn your business every month by delivering results, not by locking you in.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">What's the minimum ad spend to qualify?</button>
+                        <div class="faq-answer">
+                            <p>We work best with brands spending $50K or more per month on Amazon Ads. At that level, the analysis uncovers meaningful savings and growth opportunities that justify the investment.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             FINAL CTA
+             ================================================ -->
+        <section id="final-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Start With a Free Audit</h2>
+                    <p>See exactly where your Amazon Ads budget is going &mdash; and where it should be going. No commitment, no credit card, results in ~48 hours.</p>
+                    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
+                    <p class="cta-trust">Free audit. No contracts. Flat fees only.</p>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- Footer -->
+    <footer>
+        <div style="padding: 0 20px;">
+            <p>&copy; 2026 Fame Express LLC | San Francisco, CA</p>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a> |
+                <a href="/pricing.html">Pricing</a> |
+                <a href="/privacypolicy.html">Privacy Policy</a> |
+                <a href="/terms.html">Terms of Service</a> |
+                <a href="/support.html">Customer Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <span class="sticky-cta-text">Flat fees &mdash; never a percentage of your ad spend</span>
+        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="sticky-cta-btn" target="_blank" rel="noopener">Book a Demo</a>
+    </div>
+
+    <script>
+        // FAQ toggle
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                this.closest('.faq-item').classList.toggle('open');
+            });
+        });
+    </script>
+
+</body>
+</html>
