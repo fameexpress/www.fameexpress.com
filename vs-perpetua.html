@@ -316,6 +316,24 @@
             background: rgba(0, 255, 136, 0.05);
             border: 1px solid rgba(0, 255, 136, 0.3);
             box-shadow: 0 0 40px rgba(0, 255, 136, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comparison-col.us::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: 18px;
+            right: -34px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 6px 40px;
+            transform: rotate(45deg);
+            z-index: 10;
         }
 
         .col-header {
@@ -797,6 +815,7 @@
             padding: 28px 20px;
             font-size: 0.9rem;
             margin-top: 0;
+        padding-bottom: 80px;
         }
 
         footer a {
@@ -827,6 +846,113 @@
             margin-top: 12px;
             line-height: 1.65;
         }
+
+        /* =====================================================
+           MOBILE RESPONSIVE
+           ===================================================== */
+        @media (max-width: 768px) {
+            /* Issue 1: Switch diagonal ribbon to corner badge */
+            .comparison-col.us {
+                overflow: visible;
+            }
+
+            .comparison-col.us::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: auto;
+                height: auto;
+                transform: none;
+                padding: 4px 12px;
+                font-size: 0.7rem;
+                border-radius: 0 0 0 8px;
+            }
+
+            /* Comparison grid stacks to single column */
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+
+            /* Reduce section padding */
+            section {
+                padding: 48px 0;
+            }
+
+            /* Founder section stacks properly */
+            .founder-card {
+                flex-direction: column;
+                gap: 24px;
+            }
+
+            /* Feature lists don't get cramped */
+            .comparison-item {
+                font-size: 0.9rem;
+            }
+
+            .deliverables-list li {
+                padding: 12px 14px;
+                font-size: 0.9rem;
+            }
+
+            /* Stat tiles stack better */
+            .stat-tile {
+                min-width: 140px;
+                padding: 20px 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            /* Buttons full-width on small screens */
+            .btn-primary {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 16px 24px;
+            }
+
+            .nav-cta {
+                padding: 8px 16px;
+                font-size: 0.7rem;
+                letter-spacing: 1px;
+            }
+
+            /* Sticky CTA button full-width */
+            .sticky-cta {
+                flex-direction: column;
+                gap: 10px;
+                padding: 12px 16px;
+            }
+
+            .sticky-cta-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Reduce container padding */
+            .container,
+            .container-wide {
+                padding: 0 16px;
+            }
+        }
+    
+        /* Mobile text overflow fix */
+        @media (max-width: 768px) {
+            h1, h2, .hero h1, .hero-title, [class*="hero"] h1 {
+                word-break: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+                font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+            }
+            .hero p, .hero-subtitle, [class*="hero"] p, .subhead {
+                overflow-wrap: break-word;
+                word-break: break-word;
+                padding: 0 8px;
+            }
+            body {
+                overflow-x: hidden;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -1103,7 +1229,7 @@
                 </div>
 
                 <div class="founder-card">
-                    <div class="founder-avatar">AC</div>
+                    <div class="founder-avatar"><img src="assets/anand-headshot-2025.jpg" alt="Anand Chhatpar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
                     <div class="founder-info">
                         <h3>Anand Chhatpar</h3>
                         <span class="founder-title">Founder, Fame Express</span>
@@ -1141,7 +1267,7 @@
     <!-- Footer -->
     <footer>
         <div style="padding: 0 20px;">
-            <p>&copy; 2025 Fame Express LLC | San Francisco, CA</p>
+            <p>&copy; 2026 Fame Express LLC | San Francisco, CA</p>
             <p style="margin-top: 10px;">
                 <a href="/">Home</a> |
                 <a href="/privacypolicy.html">Privacy Policy</a> |
