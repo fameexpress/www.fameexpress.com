@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fame Express vs Perpetua | Free Amazon Ads Audit Alternative</title>
+    <meta name="description" content="Considering Perpetua for Amazon Ads? Compare Fame Express vs Perpetua. Get a free 17+ page AMC audit — no subscription required. See which approach actually grows your Amazon business.">
+    <meta name="keywords" content="perpetua alternative, perpetua vs fame express, amazon ads optimization, AMC audit, perpetua competitor, amazon advertising alternative">
+    <link rel="canonical" href="https://www.fameexpress.com/vs-perpetua.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fame Express vs Perpetua | Free Amazon Ads Audit Alternative">
+    <meta property="og:description" content="Strategy-first Amazon Ads optimization powered by direct AMC SQL analysis. Free 17+ page audit, no subscription required.">
+    <meta property="og:url" content="https://www.fameexpress.com/vs-perpetua.html">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* =====================================================
+           RESET & BASE
+           ===================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            overflow-x: hidden;
+            padding-bottom: 80px; /* space for sticky CTA */
+        }
+
+        /* =====================================================
+           BACKGROUND LAYERS
+           ===================================================== */
+        .grid-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.4) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: center center;
+        }
+
+        @keyframes gridMove {
+            0% { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+        }
+
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            background: radial-gradient(
+                ellipse at center,
+                transparent 0%,
+                transparent 50%,
+                rgba(0, 0, 0, 0.4) 80%,
+                rgba(0, 0, 0, 0.7) 100%
+            );
+        }
+
+        /* =====================================================
+           LAYOUT
+           ===================================================== */
+        .page-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 48px);
+        }
+
+        .container-wide {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 48px);
+        }
+
+        section {
+            padding: clamp(60px, 8vw, 100px) 0;
+        }
+
+        /* =====================================================
+           TYPOGRAPHY
+           ===================================================== */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        p {
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* =====================================================
+           NAV
+           ===================================================== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+            padding: 16px 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 48px);
+        }
+
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #00ffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-logo span {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .nav-cta {
+            display: inline-block;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.45);
+        }
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+        #hero {
+            padding: clamp(80px, 10vw, 120px) 0 clamp(60px, 8vw, 90px);
+            text-align: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ffff;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 6px 18px;
+            margin-bottom: 28px;
+            background: rgba(0, 255, 255, 0.05);
+        }
+
+        #hero h1 {
+            font-size: clamp(2.4rem, 6vw, 4.2rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subhead {
+            font-size: clamp(1.05rem, 2.5vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 640px;
+            margin: 0 auto 44px;
+            line-height: 1.65;
+        }
+
+        .hero-cta-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 44px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 6px 30px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.55);
+        }
+
+        .hero-microcopy {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* =====================================================
+           COMPARISON
+           ===================================================== */
+        #comparison {
+            background: rgba(0, 255, 255, 0.02);
+            border-top: 1px solid rgba(0, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+        }
+
+        .section-label {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #00ffff;
+            margin-bottom: 12px;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 640px) {
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .comparison-col {
+            border-radius: 16px;
+            padding: clamp(24px, 4vw, 36px);
+        }
+
+        .comparison-col.them {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .comparison-col.us {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            box-shadow: 0 0 40px rgba(0, 255, 136, 0.06);
+        }
+
+        .col-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .col-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 6px 14px;
+            border-radius: 8px;
+        }
+
+        .col-logo.them-logo {
+            background: rgba(255, 255, 255, 0.07);
+            color: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .col-logo.us-logo {
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .comparison-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .comparison-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .icon-check {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .icon-check.green {
+            background: rgba(0, 255, 136, 0.15);
+            color: #00ff88;
+            border: 1px solid rgba(0, 255, 136, 0.4);
+        }
+
+        .icon-check.neutral {
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .comparison-item-text {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.5;
+        }
+
+        .comparison-item-text strong {
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        /* =====================================================
+           DIFFERENTIATORS
+           ===================================================== */
+        #differentiators {
+            text-align: center;
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 48px;
+            text-align: left;
+        }
+
+        .diff-card {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: clamp(20px, 3vw, 32px);
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .diff-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 255, 255, 0.45);
+            box-shadow: 0 8px 32px rgba(0, 255, 255, 0.08);
+        }
+
+        .diff-icon {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .diff-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+
+        .diff-card p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        .diff-card .stat-highlight {
+            display: inline-block;
+            margin-top: 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: #00ff88;
+            background: rgba(0, 255, 136, 0.08);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 6px;
+            padding: 4px 10px;
+        }
+
+        /* =====================================================
+           WHAT YOU GET
+           ===================================================== */
+        #deliverables {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 1px solid rgba(0, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+        }
+
+        .deliverables-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 720px) {
+            .deliverables-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .deliverables-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .deliverables-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            background: rgba(0, 255, 136, 0.04);
+            border: 1px solid rgba(0, 255, 136, 0.15);
+            border-radius: 12px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            transition: border-color 0.3s;
+        }
+
+        .deliverables-list li:hover {
+            border-color: rgba(0, 255, 136, 0.35);
+        }
+
+        .check-mark {
+            color: #00ff88;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .deliverables-right {
+            text-align: center;
+        }
+
+        .audit-callout {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.25);
+            border-radius: 20px;
+            padding: clamp(28px, 4vw, 44px);
+        }
+
+        .audit-number {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            color: #00ffff;
+            text-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+            line-height: 1;
+            display: block;
+        }
+
+        .audit-number-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'JetBrains Mono', monospace;
+            display: block;
+            margin-top: 6px;
+        }
+
+        .audit-divider {
+            width: 48px;
+            height: 2px;
+            background: linear-gradient(90deg, #00ffff, #00ff88);
+            margin: 20px auto;
+            border-radius: 1px;
+        }
+
+        .audit-callout p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.65);
+            line-height: 1.6;
+        }
+
+        .audit-callout .cta-note {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: #00ff88;
+            font-style: italic;
+        }
+
+        /* =====================================================
+           PROOF STATS
+           ===================================================== */
+        #proof {
+            text-align: center;
+        }
+
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 48px;
+        }
+
+        .stat-tile {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 28px 36px;
+            min-width: 180px;
+            flex: 1;
+            max-width: 240px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .stat-tile:hover {
+            transform: translateY(-4px);
+            border-color: rgba(0, 255, 255, 0.45);
+        }
+
+        .stat-value {
+            display: block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 700;
+            color: #00ffff;
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .stat-value.green {
+            color: #00ff88;
+        }
+
+        .stat-label {
+            display: block;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.55);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        /* =====================================================
+           FOUNDER
+           ===================================================== */
+        #founder {
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(0, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
+        }
+
+        .founder-card {
+            background: rgba(0, 255, 255, 0.04);
+            border: 1px solid rgba(0, 255, 255, 0.18);
+            border-radius: 20px;
+            padding: clamp(28px, 5vw, 52px);
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 580px) {
+            .founder-card {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+
+        .founder-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00ffff 0%, #00ff88 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0a0a0f;
+            flex-shrink: 0;
+        }
+
+        .founder-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+            color: #ffffff;
+        }
+
+        .founder-title {
+            font-size: 0.8rem;
+            color: #00ffff;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .founder-creds {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .founder-creds li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cred-icon {
+            color: #00ff88;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        /* =====================================================
+           FINAL CTA
+           ===================================================== */
+        #final-cta {
+            text-align: center;
+        }
+
+        .cta-box {
+            background: rgba(0, 255, 136, 0.04);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 24px;
+            padding: clamp(40px, 6vw, 72px) clamp(24px, 4vw, 60px);
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .cta-box h2 {
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-box p {
+            margin-bottom: 36px;
+            font-size: 1.05rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .cta-trust {
+            margin-top: 20px;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.35);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* =====================================================
+           STICKY CTA
+           ===================================================== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 300;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(0, 255, 136, 0.2);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-cta-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.55);
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .sticky-cta-text {
+                display: block;
+            }
+        }
+
+        .sticky-cta-btn {
+            display: inline-block;
+            padding: 13px 36px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-weight: 700;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.35);
+            white-space: nowrap;
+        }
+
+        .sticky-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 255, 136, 0.5);
+        }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 28px 20px;
+            font-size: 0.9rem;
+            margin-top: 0;
+        }
+
+        footer a {
+            color: #FF9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =====================================================
+           UTILITIES
+           ===================================================== */
+        .text-center { text-align: center; }
+        .text-cyan { color: #00ffff; }
+        .text-green { color: #00ff88; }
+        .text-muted { color: rgba(255, 255, 255, 0.5); }
+
+        .section-title-block {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .section-subtitle {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 12px;
+            line-height: 1.65;
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Background layers -->
+    <div class="grid-bg"></div>
+    <div class="vignette"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-inner">
+            <a href="/" class="nav-logo">Fame Express <span>/ vs Perpetua</span></a>
+            <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="nav-cta" target="_blank" rel="noopener">Book a Demo</a>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+
+        <!-- ================================================
+             HERO
+             ================================================ -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-eyebrow">Perpetua Alternative</div>
+                <h1>Looking for a Perpetua Alternative?</h1>
+                <p class="hero-subhead">
+                    Automation is great, but are you automating the right strategy?
+                    Let's find out — for free.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
+                    <span class="hero-microcopy">Free 17+ page audit &mdash; no subscription, no credit card</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             COMPARISON
+             ================================================ -->
+        <section id="comparison">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Side-by-Side</span>
+                    <h2>How Fame Express Compares</h2>
+                    <p class="section-subtitle">Two different philosophies for Amazon Ads — one automates your current strategy, the other audits and improves it first.</p>
+                </div>
+
+                <div class="comparison-table">
+
+                    <!-- Perpetua -->
+                    <div class="comparison-col them">
+                        <div class="col-header">
+                            <div class="col-logo them-logo">Perpetua</div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check neutral">&#9632;</div>
+                            <span class="comparison-item-text"><strong>Goal-based automation</strong> — set targets, let algorithms bid</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check neutral">&#9632;</div>
+                            <span class="comparison-item-text"><strong>Simpler UX</strong> — streamlined campaign management interface</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check neutral">&#9632;</div>
+                            <span class="comparison-item-text"><strong>AI-powered bidding</strong> — automated bid optimization at scale</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check neutral">&#9632;</div>
+                            <span class="comparison-item-text"><strong>Automated campaign management</strong> — hands-off operations</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check neutral">&#9632;</div>
+                            <span class="comparison-item-text"><strong>Monthly subscription required</strong> — ongoing cost to access features</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check neutral">&#9632;</div>
+                            <span class="comparison-item-text"><strong>Dashboard-driven insights</strong> — pre-built views of your account</span>
+                        </div>
+                    </div>
+
+                    <!-- Fame Express -->
+                    <div class="comparison-col us">
+                        <div class="col-header">
+                            <div class="col-logo us-logo">Fame Express</div>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check green">&#10003;</div>
+                            <span class="comparison-item-text"><strong>Strategy-first</strong> — powered by direct AMC SQL analysis of your actual data</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check green">&#10003;</div>
+                            <span class="comparison-item-text"><strong>Deep analytics with clear action plans</strong> — not just dashboards, but specific next steps</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check green">&#10003;</div>
+                            <span class="comparison-item-text"><strong>AI agent generates custom SQL queries</strong> for YOUR business questions, not generic ones</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check green">&#10003;</div>
+                            <span class="comparison-item-text"><strong>Comprehensive audit</strong> identifies what to automate AND what to fix first</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check green">&#10003;</div>
+                            <span class="comparison-item-text"><strong>Free 17+ page audit to start</strong> — understand the full picture before committing</span>
+                        </div>
+                        <div class="comparison-item">
+                            <div class="icon-check green">&#10003;</div>
+                            <span class="comparison-item-text"><strong>Direct AMC data</strong> — not abstracted dashboards, actual Amazon Marketing Cloud SQL results</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             DIFFERENTIATORS
+             ================================================ -->
+        <section id="differentiators">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">The Difference</span>
+                    <h2>The Fame Express Difference</h2>
+                    <p class="section-subtitle">Most tools automate your current strategy. We audit it first — then help you automate the right one.</p>
+                </div>
+
+                <div class="diff-grid">
+
+                    <div class="diff-card">
+                        <span class="diff-icon">&#128202;</span>
+                        <h3>Direct AMC SQL Analysis</h3>
+                        <p>We query Amazon Marketing Cloud directly — no abstractions, no simplified views. Raw SQL against your actual campaign data surfaces insights dashboards can't show.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <span class="diff-icon">&#129302;</span>
+                        <h3>AI Agent, Custom Queries</h3>
+                        <p>Our AI agent doesn't run generic reports. It generates custom SQL queries tailored to your specific business questions, products, and account structure.</p>
+                    </div>
+
+                    <div class="diff-card">
+                        <span class="diff-icon">&#128270;</span>
+                        <h3>Free 17+ Page Audit</h3>
+                        <p>Before you spend a dollar on optimization tools, know exactly what's working and what isn't. A comprehensive audit delivered in ~48 hours, completely free.</p>
+                        <span class="stat-highlight">~48 hour turnaround</span>
+                    </div>
+
+                    <div class="diff-card">
+                        <span class="diff-icon">&#128181;</span>
+                        <h3>$393K Found for One Client</h3>
+                        <p>One audit uncovered $69K in wasted spend and $294K in incremental sales opportunities — money that was invisible in standard reporting dashboards.</p>
+                        <span class="stat-highlight">$393K optimization opportunity</span>
+                    </div>
+
+                    <div class="diff-card">
+                        <span class="diff-icon">&#9889;</span>
+                        <h3>215 Critical Actions Identified</h3>
+                        <p>Not vague recommendations — specific, prioritized actions with expected impact. One audit identified 215 critical actions ready to implement.</p>
+                        <span class="stat-highlight">215 actions, one audit</span>
+                    </div>
+
+                    <div class="diff-card">
+                        <span class="diff-icon">&#127919;</span>
+                        <h3>Automate the Right Strategy</h3>
+                        <p>Automating a broken strategy faster just burns budget faster. We fix the strategy first, then help you automate what actually works for your account.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             WHAT YOU GET
+             ================================================ -->
+        <section id="deliverables">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Free Audit</span>
+                    <h2>What You Get — Free</h2>
+                    <p class="section-subtitle">We'll come prepared with specific recommendations for YOUR account. Not a template. Not a generic pitch. Actual analysis of your campaigns.</p>
+                </div>
+
+                <div class="deliverables-layout">
+
+                    <ul class="deliverables-list">
+                        <li>
+                            <span class="check-mark">&#10003;</span>
+                            <span>17+ page comprehensive audit report covering your full Amazon Ads account</span>
+                        </li>
+                        <li>
+                            <span class="check-mark">&#10003;</span>
+                            <span>Prioritized action plan — highest impact items first, ready to execute</span>
+                        </li>
+                        <li>
+                            <span class="check-mark">&#10003;</span>
+                            <span>Wasted spend identification — the exact campaigns, ad groups, and keywords burning budget</span>
+                        </li>
+                        <li>
+                            <span class="check-mark">&#10003;</span>
+                            <span>Incremental sales opportunities — revenue you're leaving on the table right now</span>
+                        </li>
+                        <li>
+                            <span class="check-mark">&#10003;</span>
+                            <span>Direct AMC SQL insights — data pulled straight from Amazon Marketing Cloud</span>
+                        </li>
+                        <li>
+                            <span class="check-mark">&#10003;</span>
+                            <span>Demo call to walk through findings and answer every question</span>
+                        </li>
+                    </ul>
+
+                    <div class="deliverables-right">
+                        <div class="audit-callout">
+                            <span class="audit-number">17+</span>
+                            <span class="audit-number-label">Pages of Analysis</span>
+                            <div class="audit-divider"></div>
+                            <p>Delivered in approximately 48 hours. Specific to your account. No generic templates.</p>
+                            <p class="cta-note">"We'll come prepared with specific recommendations for YOUR account."</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             PROOF STATS
+             ================================================ -->
+        <section id="proof">
+            <div class="container">
+                <div class="section-title-block text-center">
+                    <span class="section-label">Real Results</span>
+                    <h2>Numbers That Speak</h2>
+                    <p class="section-subtitle">From a single audit engagement — not averaged across accounts, not projections.</p>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-tile">
+                        <span class="stat-value">$69K</span>
+                        <span class="stat-label">Wasted spend identified in one audit</span>
+                    </div>
+                    <div class="stat-tile">
+                        <span class="stat-value green">$294K</span>
+                        <span class="stat-label">Incremental sales opportunities found</span>
+                    </div>
+                    <div class="stat-tile">
+                        <span class="stat-value">$393K</span>
+                        <span class="stat-label">Total optimization opportunity discovered</span>
+                    </div>
+                    <div class="stat-tile">
+                        <span class="stat-value green">215</span>
+                        <span class="stat-label">Critical actions identified in a single audit</span>
+                    </div>
+                    <div class="stat-tile">
+                        <span class="stat-value">~48hrs</span>
+                        <span class="stat-label">Typical audit delivery time</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+             FOUNDER
+             ================================================ -->
+        <section id="founder">
+            <div class="container">
+                <div class="section-title-block text-center" style="margin-bottom: 40px;">
+                    <span class="section-label">About the Founder</span>
+                    <h2>Who's Behind Fame Express</h2>
+                </div>
+
+                <div class="founder-card">
+                    <div class="founder-avatar">AC</div>
+                    <div class="founder-info">
+                        <h3>Anand Chhatpar</h3>
+                        <span class="founder-title">Founder, Fame Express</span>
+                        <p style="font-size: 0.95rem; color: rgba(255,255,255,0.65);">
+                            A technologist who has built products at scale and led companies to major exits. When Anand analyzes your Amazon Ads account, he brings the same systematic, data-first approach that built Facebook apps to 20 million users.
+                        </p>
+                        <ul class="founder-creds">
+                            <li><span class="cred-icon">&#9679;</span><span>20+ years in technology, product, and growth</span></li>
+                            <li><span class="cred-icon">&#9679;</span><span>Built Facebook apps to 20M+ users</span></li>
+                            <li><span class="cred-icon">&#9679;</span><span>Led Mystery Science to $125M+ acquisition</span></li>
+                            <li><span class="cred-icon">&#9679;</span><span>8 Patents — a builder, not a box-checker</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================================
+             FINAL CTA
+             ================================================ -->
+        <section id="final-cta">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready to Automate the Right Strategy?</h2>
+                    <p>Find out what your Amazon Ads account is really doing — and what it could be doing. The audit is free, specific to your account, and takes about 48 hours.</p>
+                    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
+                    <p class="cta-trust">No subscription. No credit card. Just answers.</p>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /page-wrapper -->
+
+    <!-- Footer -->
+    <footer>
+        <div style="padding: 0 20px;">
+            <p>&copy; 2025 Fame Express LLC | San Francisco, CA</p>
+            <p style="margin-top: 10px;">
+                <a href="/">Home</a> |
+                <a href="/privacypolicy.html">Privacy Policy</a> |
+                <a href="/terms.html">Terms of Service</a> |
+                <a href="/support.html">Customer Support</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta">
+        <span class="sticky-cta-text">Free 17+ page audit &mdash; specific to your account</span>
+        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="sticky-cta-btn" target="_blank" rel="noopener">Book a Demo</a>
+    </div>
+
+</body>
+</html>
