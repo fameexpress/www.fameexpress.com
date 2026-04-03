@@ -723,6 +723,7 @@
             text-align: center;
             padding: 40px clamp(20px, 5vw, 60px) 100px;
             font-size: 0.85rem;
+        padding-bottom: 80px;
         }
 
         footer a {
@@ -765,7 +766,83 @@
         /* =====================================================
            RESPONSIVE
            ===================================================== */
+        @media (max-width: 768px) {
+            /* Issue 1: Ribbon fix — switch to simple corner badge */
+            .comparison-card.highlight {
+                overflow: visible;
+            }
+
+            .comparison-card.highlight::before {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: auto;
+                height: auto;
+                transform: none;
+                padding: 4px 12px;
+                font-size: 0.7rem;
+                border-radius: 0 0 0 8px;
+            }
+
+            /* Issue 3: Comparison grid stacks */
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            /* Founder section stacks properly */
+            .founder-card {
+                padding: 28px 20px;
+            }
+
+            .founder-creds {
+                gap: 8px;
+            }
+
+            .cred-badge {
+                font-size: 0.75rem;
+                padding: 5px 10px;
+            }
+
+            /* Reduce section padding */
+            section {
+                padding: clamp(40px, 8vw, 60px) 0;
+            }
+
+            /* Feature lists don't get cramped */
+            .comparison-list li {
+                font-size: 0.9rem;
+                gap: 10px;
+            }
+
+            .diff-cards {
+                grid-template-columns: 1fr;
+            }
+
+            /* Metric tiles stack better */
+            .metric-tile {
+                min-width: 140px;
+                padding: 20px 24px;
+            }
+
+            /* Sticky CTA adjustments */
+            #cta-sticky {
+                padding: 14px 32px;
+                font-size: 12px;
+                letter-spacing: 1px;
+                bottom: 16px;
+            }
+        }
+
         @media (max-width: 480px) {
+            /* Buttons full-width on small screens */
+            .btn-primary {
+                display: block;
+                width: 100%;
+                padding: 16px 32px;
+                font-size: 13px;
+                text-align: center;
+            }
+
             .topbar-logo {
                 font-size: 12px;
             }
@@ -776,15 +853,23 @@
                 letter-spacing: 1px;
             }
 
-            .btn-primary {
-                padding: 16px 32px;
-                font-size: 13px;
-            }
-
             #cta-sticky {
                 padding: 14px 28px;
                 font-size: 11px;
                 letter-spacing: 1px;
+            }
+
+            /* Reduce container padding */
+            .container {
+                padding: 0 16px;
+            }
+
+            .comparison-card {
+                padding: 24px 18px;
+            }
+
+            .deliverables-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -792,6 +877,25 @@
             .grid-bg { animation: none; }
             #cta-sticky { animation: none; }
         }
+    
+        /* Mobile text overflow fix */
+        @media (max-width: 768px) {
+            h1, h2, .hero h1, .hero-title, [class*="hero"] h1 {
+                word-break: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+                font-size: clamp(1.5rem, 6vw, 2.5rem) !important;
+            }
+            .hero p, .hero-subtitle, [class*="hero"] p, .subhead {
+                overflow-wrap: break-word;
+                word-break: break-word;
+                padding: 0 8px;
+            }
+            body {
+                overflow-x: hidden;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -808,7 +912,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Top navigation bar -->
 <nav class="topbar">
     <a href="/" class="topbar-logo">Fame Express</a>
-    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="topbar-cta" target="_blank" rel="noopener">Book a Call</a>
+    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="topbar-cta" target="_blank" rel="noopener">Book a Demo</a>
 </nav>
 
 <main class="page-wrapper">
@@ -1050,7 +1154,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="section-divider center" style="margin-bottom: 48px;"></div>
 
             <div class="founder-card">
-                <div class="founder-avatar">AC</div>
+                <div class="founder-avatar"><img src="assets/anand-headshot-2025.jpg" alt="Anand Chhatpar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
                 <div class="founder-name">Anand Chhatpar</div>
                 <div class="founder-title">Founder, Fame Express</div>
 
@@ -1094,7 +1198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="/terms.html">Terms of Service</a>
         <a href="mailto:support@fameexpress.com">Customer Support</a>
     </div>
-    <p class="footer-copy">&copy; 2025 Fame Express LLC. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 Fame Express LLC. All rights reserved.</p>
 </footer>
 
 </body>
