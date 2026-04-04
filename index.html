@@ -394,40 +394,7 @@
             50% { box-shadow: 0 5px 50px rgba(0, 255, 136, 0.6); }
         }
 
-        /* =====================================================
-           6. TOOLTIP
-           ===================================================== */
-        #tooltip {
-            position: fixed;
-            z-index: 300;
-            background: rgba(10, 10, 15, 0.95);
-            border: 1px solid rgba(255, 68, 68, 0.5);
-            border-radius: 8px;
-            padding: 12px 16px;
-            pointer-events: none;
-            opacity: 0;
-            transition: opacity 0.2s;
-            max-width: 250px;
-        }
-
-        #tooltip.visible {
-            opacity: 1;
-        }
-
-        #tooltip .tooltip-label {
-            font-size: 0.9rem;
-            color: #ff4444;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        #tooltip .tooltip-value {
-            font-size: 1.1rem;
-            color: #00ff88;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* =====================================================
+                /* =====================================================
            7. ACCESSIBILITY
            ===================================================== */
         
@@ -1076,23 +1043,6 @@
          STICKY CTA
          ===================================================== -->
     <button id="cta-sticky">Get Free Audit</button>
-        <div class="tooltip-value"></div>
-    </div>
-        <div class="analysis-progress">
-            <div class="analysis-progress-fill" id="analysis-progress"></div>
-        </div>
-        <div class="sql-scroll" id="sql-scroll"></div>
-        <div class="analysis-counters">
-            <div class="analysis-counter">
-                <div class="analysis-counter-value spend" id="counter-spend">$0</div>
-                <div class="analysis-counter-label">Spend Analyzed</div>
-            </div>
-            <div class="analysis-counter">
-                <div class="analysis-counter-value waste" id="counter-waste">$0</div>
-                <div class="analysis-counter-label">Hidden Waste Found</div>
-            </div>
-        </div>
-    </div>
 
 
     <script>
