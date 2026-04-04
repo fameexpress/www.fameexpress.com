@@ -587,85 +587,16 @@
         /* =====================================================
            11. FOUNDER SECTION
            ===================================================== */
-        .founder-card {
-            background: rgba(0, 255, 255, 0.04);
-            border: 1px solid rgba(0, 255, 255, 0.18);
-            border-radius: 20px;
-            padding: clamp(32px, 5vw, 56px);
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: clamp(24px, 4vw, 48px);
-            align-items: start;
+
+        @media (max-width: 600px) {
         }
 
         @media (max-width: 600px) {
-            .founder-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
-        .founder-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 255, 136, 0.2) 100%);
-            border: 2px solid rgba(0, 255, 255, 0.4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
         }
 
         @media (max-width: 600px) {
-            .founder-avatar {
-                margin: 0 auto;
-            }
         }
 
-        .founder-name {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 4px;
-        }
-
-        .founder-title {
-            font-size: 0.9rem;
-            color: #00ffff;
-            font-family: 'JetBrains Mono', monospace;
-            margin-bottom: 20px;
-        }
-
-        .founder-bio {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .founder-bio li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.72);
-            line-height: 1.5;
-        }
-
-        @media (max-width: 600px) {
-            .founder-bio li {
-                justify-content: center;
-            }
-        }
-
-        .founder-bio li::before {
-            content: '▸';
-            color: #00ff88;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
 
         /* =====================================================
            12. FINAL CTA SECTION
@@ -781,19 +712,6 @@
 
             section {
                 padding: clamp(40px, 8vw, 60px) 0;
-            }
-
-            .founder-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .founder-avatar {
-                margin: 0 auto;
-            }
-
-            .founder-bio li {
-                justify-content: center;
             }
 
             .comparison-list li {
@@ -1142,34 +1060,6 @@
                     <div class="metric-tile">
                         <span class="metric-value">~48h</span>
                         <span class="metric-label">Time to Receive<br>Full Audit</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================
-             FOUNDER
-             ================================================ -->
-        <section id="founder">
-            <div class="container">
-                <span class="section-label">Who You're Talking To</span>
-                <h2>About the <span class="accent">Founder</span></h2>
-                <p class="section-intro">
-                    Deep technical expertise meets Amazon advertising mastery.
-                </p>
-
-                <div class="founder-card">
-                    <div class="founder-avatar" aria-hidden="true"><img src="assets/anand-headshot-2025.jpg" alt="Anand Chhatpar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-                    <div>
-                        <div class="founder-name">Anand Chhatpar</div>
-                        <div class="founder-title">Founder, Fame Express</div>
-                        <ul class="founder-bio">
-                            <li>20+ years building technology products at scale</li>
-                            <li>Built Facebook apps to 20M+ users</li>
-                            <li>Led Mystery Science to $125M+ acquisition</li>
-                            <li>8 Patents in technology and product innovation</li>
-                            <li>Now applying that same engineering rigor to Amazon ad intelligence</li>
-                        </ul>
                     </div>
                 </div>
             </div>

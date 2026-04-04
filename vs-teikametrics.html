@@ -606,96 +606,6 @@
         }
 
         /* =====================================================
-           FOUNDER SECTION
-           ===================================================== */
-        #founder {
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        #founder .section-header {
-            text-align: center;
-            margin-bottom: clamp(40px, 6vw, 64px);
-        }
-
-        #founder .section-header h2 {
-            margin-top: 12px;
-        }
-
-        .founder-card {
-            max-width: 680px;
-            margin: 0 auto;
-            background: rgba(0, 255, 255, 0.04);
-            border: 1px solid rgba(0, 255, 255, 0.18);
-            border-radius: 20px;
-            padding: clamp(28px, 5vw, 48px);
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
-        }
-
-        @media (max-width: 560px) {
-            .founder-card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-
-        .founder-card__avatar {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 255, 136, 0.2) 100%);
-            border: 2px solid rgba(0, 255, 255, 0.35);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-        }
-
-        .founder-card__name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .founder-card__title {
-            font-size: 0.85rem;
-            color: #00ffff;
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .founder-creds {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .founder-creds li {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.5;
-        }
-
-        .founder-creds li::before {
-            content: '//';
-            color: #00ff88;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        /* =====================================================
            FINAL CTA SECTION
            ===================================================== */
         #final-cta {
@@ -811,16 +721,6 @@
 
             .container, .container--wide {
                 padding: 0 16px;
-            }
-
-            .founder-card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .founder-creds li {
-                text-align: left;
             }
 
             .metrics-row {
@@ -1150,33 +1050,6 @@
 
                 <div class="deliverable-callout">
                     <p>We'll come prepared with <strong>specific recommendations for YOUR account</strong> — not a generic deck, not recycled slides. Just clear, data-backed actions you can start executing immediately.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =====================================================
-             FOUNDER SECTION
-             ===================================================== -->
-        <section id="founder">
-            <div class="container">
-                <div class="section-header">
-                    <div class="section-label">Who's Behind This</div>
-                    <h2>Built by Someone Who Has Scaled at Every Level</h2>
-                </div>
-
-                <div class="founder-card">
-                    <div class="founder-card__avatar" aria-hidden="true"><img src="assets/anand-headshot-2025.jpg" alt="Anand Chhatpar" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"></div>
-                    <div>
-                        <div class="founder-card__name">Anand Chhatpar</div>
-                        <div class="founder-card__title">Founder, Fame Express</div>
-                        <ul class="founder-creds">
-                            <li>20+ years building and scaling technology products</li>
-                            <li>Built Facebook apps to 20M+ users</li>
-                            <li>Led Mystery Science to $125M+ acquisition</li>
-                            <li>8 granted patents</li>
-                            <li>Deep expertise applying AI to real business problems — not just demos</li>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </section>
