@@ -1,269 +1,638 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
-  <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WXFCWK36');</script>
+    <!-- End Google Tag Manager -->
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms of Service | Fame Express LLC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Fame Express LLC</title>
+    <meta name="description" content="Terms of Service for Fame Express LLC. Read our terms, conditions, and policies for using our services.">
+    <link rel="canonical" href="https://www.fameexpress.com/terms.html">
 
-  <!-- Geist Font -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.0.0/dist/font.css">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Terms of Service | Fame Express LLC">
+    <meta property="og:description" content="Read our Terms of Service for using Fame Express services.">
+    <meta property="og:url" content="https://www.fameexpress.com/terms.html">
+    <meta property="og:type" content="website">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f8f9fa;
-    }
+    <style>
+        /* =====================================================
+           RESET & BASE
+           ===================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    /* Header Navigation */
-    .header {
-      background: #1a1a1a;
-      padding: 15px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0f;
+            color: #ffffff;
+            overflow-x: hidden;
+            padding-bottom: 80px; /* space for sticky CTA */
+        }
 
-    .logo {
-      color: white;
-      font-size: 1.4rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
+        /* =====================================================
+           BACKGROUND LAYERS
+           ===================================================== */
+        .grid-bg {
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.06;
+            background-image:
+                linear-gradient(rgba(0, 255, 255, 0.4) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 255, 0.4) 1px, transparent 1px);
+            background-size: 60px 60px;
+            animation: gridMove 30s linear infinite;
+            transform: perspective(500px) rotateX(60deg);
+            transform-origin: center center;
+        }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
+        @keyframes gridMove {
+            0%   { transform: perspective(500px) rotateX(60deg) translateY(0); }
+            100% { transform: perspective(500px) rotateX(60deg) translateY(60px); }
+        }
 
-    .nav-links a {
-      color: #e5e7eb;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+        .scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
 
-    .nav-links a:hover {
-      color: #FF9900;
-    }
+        .scanlines::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent 0px,
+                transparent 2px,
+                rgba(0, 0, 0, 0.06) 2px,
+                rgba(0, 0, 0, 0.06) 4px
+            );
+            animation: scanlineMove 10s linear infinite;
+        }
 
-    .nav-cta {
-      background: #FF9900;
-      color: white !important;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
+        @keyframes scanlineMove {
+            0%   { transform: translateY(0); }
+            100% { transform: translateY(4px); }
+        }
 
-    .nav-cta:hover {
-      background: #e68a00;
-      transform: translateY(-1px);
-    }
+        .vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(
+                ellipse at center,
+                transparent 0%,
+                transparent 50%,
+                rgba(0, 0, 0, 0.4) 80%,
+                rgba(0, 0, 0, 0.7) 100%
+            );
+        }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 60px 20px;
-    }
+        /* =====================================================
+           LAYOUT
+           ===================================================== */
+        .page-wrapper {
+            position: relative;
+            z-index: 10;
+        }
 
-    .content-card {
-      background: #fff;
-      padding: 50px;
-      border-radius: 12px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      border: 2px solid #f0f0f0;
-    }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      color: #1a1a1a;
-      margin-bottom: 10px;
-    }
+        section {
+            padding: clamp(60px, 8vw, 100px) 0;
+        }
 
-    .effective-date {
-      color: #666;
-      margin-bottom: 30px;
-      font-size: 1rem;
-    }
+        /* =====================================================
+           NAV
+           ===================================================== */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
 
-    .intro {
-      font-size: 1.1rem;
-      color: #374151;
-      margin-bottom: 40px;
-      line-height: 1.8;
-    }
+        .nav-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-    h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-top: 35px;
-      margin-bottom: 15px;
-    }
+        .nav-logo {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #00ffff;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
 
-    p {
-      margin-bottom: 15px;
-      line-height: 1.8;
-      color: #374151;
-    }
+        .nav-cta {
+            display: inline-block;
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-    ul {
-      margin-left: 25px;
-      margin-bottom: 20px;
-    }
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 255, 136, 0.4);
+        }
 
-    li {
-      margin-bottom: 10px;
-      line-height: 1.8;
-      color: #374151;
-    }
+        /* =====================================================
+           TYPOGRAPHY UTILITIES
+           ===================================================== */
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #00ffff 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    a {
-      color: #146eb4;
-      text-decoration: none;
-    }
+        .accent { color: #00ffff; }
+        .accent-green { color: #00ff88; }
 
-    a:hover {
-      text-decoration: underline;
-    }
+        /* =====================================================
+           HERO SECTION
+           ===================================================== */
+        #hero {
+            padding: clamp(80px, 10vw, 120px) 0 clamp(60px, 8vw, 80px);
+            text-align: center;
+        }
 
-    footer {
-      background: #1a1a1a;
-      color: #999;
-      text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      margin-top: 60px;
-    }
+        .hero-eyebrow {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: #00ffff;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 30px;
+            padding: 6px 18px;
+            margin-bottom: 32px;
+        }
 
-    footer a {
-      color: #FF9900;
-      text-decoration: none;
-    }
+        #hero h1 {
+            font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
+        .hero-subhead {
+            font-size: clamp(1rem, 2.2vw, 1.25rem);
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.65;
+        }
 
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2rem;
-      }
+        /* =====================================================
+           CONTENT SECTIONS
+           ===================================================== */
+        .section-title {
+            font-size: clamp(1.6rem, 3.2vw, 2.3rem);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
 
-      .content-card {
-        padding: 30px 20px;
-      }
+        .section-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1rem;
+            margin-bottom: 48px;
+            max-width: 560px;
+            line-height: 1.6;
+        }
 
-      .nav-links {
-        gap: 15px;
-      }
+        /* Terms content styling */
+        .terms-content {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 48px 40px;
+        }
 
-      .nav-links a:not(.nav-cta) {
-        display: none;
-      }
-    }
-  </style>
+        .terms-intro {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .terms-section {
+            margin-bottom: 40px;
+        }
+
+        .terms-section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .terms-section h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .terms-section p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 16px;
+        }
+
+        .terms-section ul {
+            list-style: none;
+            margin-left: 0;
+            margin-bottom: 16px;
+        }
+
+        .terms-section li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .terms-section li::before {
+            content: '•';
+            position: absolute;
+            left: 8px;
+            color: #00ffff;
+            font-weight: 700;
+        }
+
+        .terms-section a {
+            color: #00ffff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+            transition: border-color 0.2s;
+        }
+
+        .terms-section a:hover {
+            border-bottom-color: #00ffff;
+        }
+
+        .effective-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            color: #00ff88;
+            margin-bottom: 32px;
+        }
+
+        .contact-info {
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+
+        .contact-info p {
+            margin-bottom: 8px;
+        }
+
+        .contact-info a {
+            color: #00ff88;
+            border-bottom-color: rgba(0, 255, 136, 0.3);
+        }
+
+        .contact-info strong {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+        footer {
+            position: relative;
+            z-index: 10;
+            background: #1a1a1a;
+            color: #999;
+            text-align: center;
+            padding: 28px 24px;
+            font-size: 0.9rem;
+            margin-bottom: 70px;
+            padding-bottom: 80px;
+        }
+
+        footer a {
+            color: #FF9900;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* =====================================================
+           STICKY CTA
+           ===================================================== */
+        .sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 500;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(0, 255, 255, 0.15);
+            padding: 14px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sticky-cta-text {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.55);
+            display: none;
+        }
+
+        @media (min-width: 500px) {
+            .sticky-cta-text {
+                display: block;
+            }
+        }
+
+        .sticky-cta .btn-primary {
+            padding: 13px 32px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        /* =====================================================
+           BUTTONS
+           ===================================================== */
+        .btn-primary {
+            display: inline-block;
+            padding: 18px 44px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 8px 30px rgba(0, 255, 136, 0.25);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        /* =====================================================
+           MOBILE RESPONSIVE
+           ===================================================== */
+        @media (max-width: 768px) {
+            .terms-content {
+                padding: 32px 24px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .nav-links a:not(.nav-cta) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .terms-content {
+                padding: 24px 16px;
+            }
+
+            .sticky-cta {
+                padding: 10px 16px;
+                gap: 12px;
+            }
+
+            .sticky-cta .btn-primary {
+                padding: 10px 20px;
+                font-size: 0.8rem;
+            }
+
+            .btn-primary {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXFCWK36"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Header Navigation -->
-  <header class="header">
-    <div class="header-container">
-      <a href="/" class="logo">Fame Express</a>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/team.html">Team</a>
-        <a href="/support.html">Support</a>
-        <a href="/#contact" class="nav-cta">Get Free Audit</a>
-      </nav>
+    <!-- Background layers -->
+    <div class="grid-bg"></div>
+    <div class="scanlines"></div>
+    <div class="vignette"></div>
+
+    <div class="page-wrapper">
+
+        <!-- NAV -->
+        <nav>
+            <div class="nav-inner">
+                <a href="/" class="nav-logo">FAME EXPRESS</a>
+                <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="nav-cta">Book a Demo</a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section id="hero">
+            <div class="container">
+                <span class="hero-eyebrow">Terms of Service</span>
+                <h1>Terms of Service</h1>
+                <p class="hero-subhead">
+                    Last updated: December 1, 2025
+                </p>
+            </div>
+        </section>
+
+        <!-- TERMS CONTENT -->
+        <section id="terms-content">
+            <div class="container">
+                <div class="terms-content">
+                    <p class="terms-intro">
+                        Welcome to Fame Express LLC. By accessing or using our website and services, you agree to be bound by these Terms of Service. Please read them carefully.
+                    </p>
+
+                    <div class="terms-section">
+                        <h2>1. Acceptance of Terms</h2>
+                        <p>
+                            By accessing or using our website (www.fameexpress.com) and any services offered by Fame Express LLC, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>2. Description of Services</h2>
+                        <p>
+                            Fame Express LLC provides software solutions including AI-powered Amazon Ads optimization and various web applications. Our services may include data analysis, reporting, and recommendations based on your Amazon advertising data.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>3. User Responsibilities</h2>
+                        <ul>
+                            <li>You agree to provide accurate and complete information when using our services.</li>
+                            <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+                            <li>You agree not to use our services for any unlawful purpose or in violation of any applicable laws.</li>
+                            <li>You agree to grant us necessary access to your Amazon advertising accounts as required to provide our services.</li>
+                        </ul>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>4. Intellectual Property</h2>
+                        <p>
+                            All content, features, and functionality of our website and services, including but not limited to text, graphics, logos, and software, are the exclusive property of Fame Express LLC and are protected by copyright, trademark, and other intellectual property laws.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>5. Payment Terms</h2>
+                        <p>
+                            Payment terms for our services are as specified in your service agreement. All fees are non-refundable unless otherwise stated in writing. We reserve the right to modify our pricing with reasonable notice.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>6. Limitation of Liability</h2>
+                        <p>
+                            To the maximum extent permitted by law, Fame Express LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of our services.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>7. Disclaimer of Warranties</h2>
+                        <p>
+                            Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied. We do not guarantee specific results or outcomes from using our services.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>8. Termination</h2>
+                        <p>
+                            We reserve the right to suspend or terminate your access to our services at any time, with or without cause, and with or without notice. Upon termination, your right to use our services will immediately cease.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>9. Governing Law</h2>
+                        <p>
+                            These Terms of Service shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved in the courts of San Francisco County, California.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>10. Changes to Terms</h2>
+                        <p>
+                            We reserve the right to modify these Terms of Service at any time. We will notify users of any material changes by updating the effective date at the top of this page. Your continued use of our services after such changes constitutes acceptance of the new terms.
+                        </p>
+                    </div>
+
+                    <div class="terms-section">
+                        <h2>11. Contact Us</h2>
+                        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> <a href="mailto:anand@fameexpress.com">anand@fameexpress.com</a></p>
+                            <p><strong>Address:</strong><br>
+                            Fame Express LLC<br>
+                            San Francisco, CA 94123</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <p>&copy; 2026 Fame Express LLC | San Francisco, CA</p>
+                <p style="margin-top: 10px;">
+                    <a href="/">Home</a> |
+                    <a href="/pricing.html">Pricing</a> |
+                    <a href="/security.html">Security</a> |
+                    <a href="/team.html">Team</a> |
+                    <a href="/privacypolicy.html">Privacy Policy</a> |
+                    <a href="/terms.html">Terms of Service</a> |
+                    <a href="/support.html">Support</a>
+                </p>
+            </div>
+        </footer>
+
+    </div><!-- /.page-wrapper -->
+
+    <!-- STICKY BOTTOM CTA -->
+    <div class="sticky-cta">
+        <span class="sticky-cta-text">Questions about our terms? We're here to help.</span>
+        <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="btn-primary">
+            Book a Demo
+        </a>
     </div>
-  </header>
 
-  <div class="container">
-    <div class="content-card">
-      <h1>Terms of Service</h1>
-      <p class="effective-date">Effective Date: December 1, 2025</p>
-
-      <p class="intro">Welcome to Fame Express LLC. By accessing or using our website and services, you agree to be bound by these Terms of Service. Please read them carefully.</p>
-
-      <h2>1. Acceptance of Terms</h2>
-      <p>By accessing or using our website (www.fameexpress.com) and any services offered by Fame Express LLC, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.</p>
-
-      <h2>2. Description of Services</h2>
-      <p>Fame Express LLC provides software solutions including AI-powered Amazon Ads optimization and various web applications. Our services may include data analysis, reporting, and recommendations based on your Amazon advertising data.</p>
-
-      <h2>3. User Responsibilities</h2>
-      <ul>
-        <li>You agree to provide accurate and complete information when using our services.</li>
-        <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
-        <li>You agree not to use our services for any unlawful purpose or in violation of any applicable laws.</li>
-        <li>You agree to grant us necessary access to your Amazon advertising accounts as required to provide our services.</li>
-      </ul>
-
-      <h2>4. Intellectual Property</h2>
-      <p>All content, features, and functionality of our website and services, including but not limited to text, graphics, logos, and software, are the exclusive property of Fame Express LLC and are protected by copyright, trademark, and other intellectual property laws.</p>
-
-      <h2>5. Payment Terms</h2>
-      <p>Payment terms for our services are as specified in your service agreement. All fees are non-refundable unless otherwise stated in writing. We reserve the right to modify our pricing with reasonable notice.</p>
-
-      <h2>6. Limitation of Liability</h2>
-      <p>To the maximum extent permitted by law, Fame Express LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from your use of our services.</p>
-
-      <h2>7. Disclaimer of Warranties</h2>
-      <p>Our services are provided "as is" and "as available" without any warranties of any kind, either express or implied. We do not guarantee specific results or outcomes from using our services.</p>
-
-      <h2>8. Termination</h2>
-      <p>We reserve the right to suspend or terminate your access to our services at any time, with or without cause, and with or without notice. Upon termination, your right to use our services will immediately cease.</p>
-
-      <h2>9. Governing Law</h2>
-      <p>These Terms of Service shall be governed by and construed in accordance with the laws of the State of California, without regard to its conflict of law provisions. Any disputes arising from these terms shall be resolved in the courts of San Francisco County, California.</p>
-
-      <h2>10. Changes to Terms</h2>
-      <p>We reserve the right to modify these Terms of Service at any time. We will notify users of any material changes by updating the effective date at the top of this page. Your continued use of our services after such changes constitutes acceptance of the new terms.</p>
-
-      <h2>11. Contact Us</h2>
-      <p>If you have any questions about these Terms of Service, please contact us at:</p>
-      <p>Email: <a href="mailto:anand@fameexpress.com">anand@fameexpress.com</a></p>
-      <p>Fame Express LLC<br>
-      San Francisco, CA 94123</p>
-    </div>
-  </div>
-
-  <footer>
-    <div class="container" style="padding: 0 20px;">
-      <p>&copy; 2026 Fame Express LLC | San Francisco, CA</p>
-      <p style="margin-top: 10px;"><a href="/">Home</a> | <a href="/pricing.html">Pricing</a> | <a href="/team.html">Team</a> | <a href="/privacypolicy.html">Privacy Policy</a> | <a href="/security.html">Security</a> | <a href="/terms.html">Terms of Service</a> | <a href="/support.html">Customer Support</a></p>
-    </div>
-  </footer>
 </body>
 </html>
