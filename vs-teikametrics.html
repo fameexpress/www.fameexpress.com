@@ -606,96 +606,6 @@
         }
 
         /* =====================================================
-           FOUNDER SECTION
-           ===================================================== */
-        #founder {
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        #founder .section-header {
-            text-align: center;
-            margin-bottom: clamp(40px, 6vw, 64px);
-        }
-
-        #founder .section-header h2 {
-            margin-top: 12px;
-        }
-
-        .founder-card {
-            max-width: 680px;
-            margin: 0 auto;
-            background: rgba(0, 255, 255, 0.04);
-            border: 1px solid rgba(0, 255, 255, 0.18);
-            border-radius: 20px;
-            padding: clamp(28px, 5vw, 48px);
-            display: flex;
-            gap: 32px;
-            align-items: flex-start;
-        }
-
-        @media (max-width: 560px) {
-            .founder-card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        }
-
-        .founder-card__avatar {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2) 0%, rgba(0, 255, 136, 0.2) 100%);
-            border: 2px solid rgba(0, 255, 255, 0.35);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-        }
-
-        .founder-card__name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .founder-card__title {
-            font-size: 0.85rem;
-            color: #00ffff;
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .founder-creds {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .founder-creds li {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.5;
-        }
-
-        .founder-creds li::before {
-            content: '//';
-            color: #00ff88;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.75rem;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-
-        /* =====================================================
            FINAL CTA SECTION
            ===================================================== */
         #final-cta {
@@ -811,16 +721,6 @@
 
             .container, .container--wide {
                 padding: 0 16px;
-            }
-
-            .founder-card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .founder-creds li {
-                text-align: left;
             }
 
             .metrics-row {

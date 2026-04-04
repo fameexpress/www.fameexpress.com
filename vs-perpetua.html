@@ -633,87 +633,6 @@
         }
 
         /* =====================================================
-           FOUNDER
-           ===================================================== */
-        #founder {
-            background: rgba(0, 0, 0, 0.2);
-            border-top: 1px solid rgba(0, 255, 255, 0.08);
-            border-bottom: 1px solid rgba(0, 255, 255, 0.08);
-        }
-
-        .founder-card {
-            background: rgba(0, 255, 255, 0.04);
-            border: 1px solid rgba(0, 255, 255, 0.18);
-            border-radius: 20px;
-            padding: clamp(28px, 5vw, 52px);
-            display: flex;
-            gap: 40px;
-            align-items: flex-start;
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        @media (max-width: 580px) {
-            .founder-card {
-                flex-direction: column;
-                gap: 24px;
-            }
-        }
-
-        .founder-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #00ffff 0%, #00ff88 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #0a0a0f;
-            flex-shrink: 0;
-        }
-
-        .founder-info h3 {
-            font-size: 1.2rem;
-            margin-bottom: 4px;
-            color: #ffffff;
-        }
-
-        .founder-title {
-            font-size: 0.8rem;
-            color: #00ffff;
-            font-family: 'JetBrains Mono', monospace;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .founder-creds {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 16px;
-        }
-
-        .founder-creds li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .cred-icon {
-            color: #00ff88;
-            flex-shrink: 0;
-            font-weight: 700;
-        }
-
-        /* =====================================================
            FINAL CTA
            ===================================================== */
         #final-cta {
@@ -877,14 +796,7 @@
             section {
                 padding: 48px 0;
             }
-
-            /* Founder section stacks properly */
-            .founder-card {
-                flex-direction: column;
-                gap: 24px;
-            }
-
-            /* Feature lists don't get cramped */
+/* Feature lists don't get cramped */
             .comparison-item {
                 font-size: 0.9rem;
             }

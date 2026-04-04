@@ -599,86 +599,6 @@
         }
 
         /* =====================================================
-           FOUNDER SECTION
-           ===================================================== */
-        .founder-card {
-            max-width: 720px;
-            margin: 48px auto 0;
-            background: rgba(0, 255, 255, 0.04);
-            border: 1px solid rgba(0, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: clamp(32px, 5vw, 52px);
-            display: grid;
-            grid-template-columns: auto 1fr;
-            gap: 32px;
-            align-items: start;
-        }
-
-        @media (max-width: 560px) {
-            .founder-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-        }
-
-        .founder-avatar {
-            width: 88px;
-            height: 88px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 255, 136, 0.2));
-            border: 2px solid rgba(0, 255, 255, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.2rem;
-            flex-shrink: 0;
-        }
-
-        .founder-name {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-
-        .founder-title {
-            font-size: 0.85rem;
-            color: #00ffff;
-            font-family: 'JetBrains Mono', monospace;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .founder-credentials {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .founder-credentials li {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            line-height: 1.5;
-        }
-
-        @media (max-width: 560px) {
-            .founder-credentials li {
-                justify-content: center;
-            }
-        }
-
-        .founder-credentials li::before {
-            content: '→';
-            color: #00ffff;
-            flex-shrink: 0;
-        }
-
-        /* =====================================================
            FINAL CTA SECTION
            ===================================================== */
         #final-cta {
@@ -812,21 +732,6 @@
             /* Reduce section padding */
             section {
                 padding: clamp(40px, 6vw, 60px) 0;
-            }
-
-            /* Founder section stacks properly */
-            .founder-card {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 20px;
-            }
-
-            .founder-avatar {
-                margin: 0 auto;
-            }
-
-            .founder-credentials li {
-                justify-content: center;
             }
 
             /* Feature list spacing */
@@ -974,7 +879,7 @@
                                 <li>Free comprehensive audit to start</li>
                                 <li>AI agent generates custom SQL queries for YOUR business</li>
                                 <li>Multi-touch attribution — see the full customer journey from first ad to purchase</li>
-                                <li>Personal demo with the founder</li>
+                                <li>Personal demo with senior leadership</li>
                                 <li>No contracts — starts with a free audit</li>
                                 <li>17+ page custom report built for your account</li>
                                 <li>Results delivered in ~48 hours</li>
@@ -1051,7 +956,7 @@
                         <span class="diff-icon">&#x1F91D;</span>
                         <h3>Expert Team, No Contracts</h3>
                         <p>
-                            You work directly with our team of Amazon advertising specialists, led by the founder.
+                            You work directly with our team of Amazon advertising specialists — senior expertise, not junior account reps.
                             No SaaS subscription to pay before seeing value. The audit is free —
                             so you see proof before you commit to anything.
                         </p>
