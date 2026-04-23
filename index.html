@@ -370,12 +370,59 @@
             border: none;
             border-radius: 30px;
             cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
             box-shadow:
                 0 5px 30px rgba(0, 255, 136, 0.4),
                 0 0 60px rgba(0, 255, 136, 0.15);
             transition: transform 0.2s, box-shadow 0.2s;
             font-family: inherit;
             pointer-events: auto;
+        }
+
+        /* Book a Demo CTA (Chapter 6) */
+        .demo-cta-panel {
+            background: rgba(10, 10, 15, 0.9);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 24px;
+            padding: 56px 40px;
+            max-width: 640px;
+            margin: 0 auto;
+            backdrop-filter: blur(20px);
+        }
+        .demo-cta-panel h2 { margin-bottom: 16px; }
+        .demo-cta-panel .demo-cta-subhead {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 32px;
+        }
+        .demo-cta-btn {
+            display: inline-block;
+            padding: 18px 44px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, #00ff88 0%, #00ccff 100%);
+            color: #0a0a0f;
+            border-radius: 32px;
+            text-decoration: none;
+            box-shadow:
+                0 5px 30px rgba(0, 255, 136, 0.4),
+                0 0 60px rgba(0, 255, 136, 0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .demo-cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 8px 40px rgba(0, 255, 136, 0.5),
+                0 0 80px rgba(0, 255, 136, 0.25);
+        }
+        .demo-cta-microcopy {
+            display: block;
+            margin-top: 18px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.55);
         }
 
         #cta-sticky:hover {
@@ -985,54 +1032,20 @@
             </div>
         </section>
 
-        <!-- Chapter 6: Form -->
-        <section id="chapter-6" class="chapter" aria-label="Convert">
+        <!-- Chapter 6: Book a Demo -->
+        <section id="chapter-6" class="chapter" aria-label="Book a Demo">
             <div class="chapter-content">
-                <div class="form-panel">
-                    <h2>Request Your Free Audit</h2>
-                    <form id="audit-form" action="https://api.web3forms.com/submit" method="POST">
-                        <!-- Web3Forms Access Key -->
-                        <input type="hidden" name="access_key" value="3ae97641-1daa-420a-a7a3-62b4213230a9">
-                        <input type="hidden" name="subject" value="Free Amazon Ads Audit Request">
-                        <input type="hidden" name="from_name" value="Fame Express - Free Audit">
-                        <input type="hidden" name="redirect" value="https://www.fameexpress.com/thank-you.html">
-
-                        <!-- Anti-spam -->
-                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-
-                        <div class="form-group">
-                            <label for="name">Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Your name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Work Email *</label>
-                            <input type="email" id="email" name="email" required placeholder="you@company.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company *</label>
-                            <input type="text" id="company" name="company" required placeholder="Company name">
-                        </div>
-                        <div class="form-group">
-                            <label for="monthly-spend">Monthly Amazon Ads Spend *</label>
-                            <select id="monthly-spend" name="Monthly Amazon Ads Spend" required>
-                                <option value="">Select your monthly spend</option>
-                                <option value="$1K - $50K">$1K - $50K</option>
-                                <option value="$50K - $100K">$50K - $100K</option>
-                                <option value="$100K - $250K">$100K - $250K</option>
-                                <option value="$250K - $500K">$250K - $500K</option>
-                                <option value="$500K+">$500K+</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">What's your biggest Amazon Ads challenge? (optional)</label>
-                            <textarea id="message" name="message" rows="3" placeholder="e.g., High ACoS, scaling issues, attribution uncertainty..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Get My Free Audit</button>
-                    </form>
-                    <p class="trust-line">
-                        <span>&#128274;</span>
-                        Your data is secure. Response within 1 business day.
+                <div class="demo-cta-panel">
+                    <h2>Ready to See What's Hiding<br>in Your Amazon Ads?</h2>
+                    <p class="demo-cta-subhead">
+                        Book a free demo. We'll connect to your AMC data, run the analysis,
+                        and walk you through a 17+ page report showing exactly what's working,
+                        what's wasting money, and where your biggest growth opportunities are.
                     </p>
+                    <a href="https://calendar.app.google/FGDsEafyMM7iDc818" class="demo-cta-btn" target="_blank" rel="noopener">
+                        Book a Demo
+                    </a>
+                    <span class="demo-cta-microcopy">Free audit — no contract, no commitment. Results in ~48 hours.</span>
                 </div>
             </div>
         </section>
@@ -1042,7 +1055,7 @@
     <!-- =====================================================
          STICKY CTA
          ===================================================== -->
-    <button id="cta-sticky">Get Free Audit</button>
+    <a id="cta-sticky" href="https://calendar.app.google/FGDsEafyMM7iDc818" target="_blank" rel="noopener">Book a Demo</a>
 
 
     <script>
@@ -1104,21 +1117,6 @@
                     closeLightbox();
                 }
             });
-        });
-    </script>
-    <script>
-        // Sticky CTA scroll to form
-        function scrollToForm() {
-            const formSection = document.getElementById('chapter-6') || document.querySelector('form') || document.querySelector('.form-section');
-            if (formSection) {
-                formSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctaSticky = document.getElementById('cta-sticky');
-            if (ctaSticky) {
-                ctaSticky.addEventListener('click', scrollToForm);
-            }
         });
     </script>
     <!-- Image Lightbox -->
