@@ -142,6 +142,50 @@
             color: rgba(255, 255, 255, 0.55);
         }
 
+        .video {
+            width: 100%;
+            max-width: 340px;
+            aspect-ratio: 9 / 16;
+            margin: 0 auto 52px;
+            border-radius: 18px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            box-shadow: 0 10px 45px rgba(0, 255, 136, 0.15);
+        }
+
+        .video iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+        .more {
+            text-align: left;
+            background: rgba(0, 255, 255, 0.04);
+            border: 1px solid rgba(0, 255, 255, 0.22);
+            border-radius: 14px;
+            padding: 28px 26px;
+            margin-bottom: 52px;
+        }
+
+        .more h2 {
+            font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+            margin-bottom: 8px;
+            color: #00ff88;
+        }
+
+        .more p { color: rgba(255, 255, 255, 0.75); margin-bottom: 16px; line-height: 1.5; }
+
+        .more ul { list-style: none; }
+
+        .more li {
+            padding: 7px 0 7px 26px;
+            position: relative;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .more li::before { content: "\2713"; position: absolute; left: 0; color: #00ffff; font-weight: 700; }
+
+        .more li.etc { color: rgba(255, 255, 255, 0.6); font-style: italic; }
+        .more li.etc::before { content: "+"; }
+
         footer {
             position: relative;
             z-index: 10;
@@ -173,6 +217,12 @@
             dashboard to learn, no onboarding.
         </p>
 
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/_192-xEX4ww" title="Talk to Rani AI"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe>
+        </div>
+
         <div class="does">
             <div>
                 <strong>Inbox and calendar</strong>
@@ -192,7 +242,21 @@
             </div>
         </div>
 
-        <a href="https://api.whatsapp.com/send?phone=919920176058&text=Hello%20Rani%2C%20Please%20run%20setup%20for%20me."
+        <div class="more">
+            <h2>It's better than ChatGPT</h2>
+            <p>ChatGPT gives you answers. Rani gets the work done. She can:</p>
+            <ul>
+                <li>Send emails for you from her own email address</li>
+                <li>Find the right contacts for you</li>
+                <li>Connect to all your work tools</li>
+                <li>Make videos and animations</li>
+                <li>Make or edit docs, spreadsheets, websites and online stores</li>
+                <li>Run daily, weekly and monthly scheduled tasks for you</li>
+                <li class="etc">And many, many more things</li>
+            </ul>
+        </div>
+
+        <a href="https://wa.me/919920176058?text=Hi%20Rani%2C%20I%27m%20new%20here"
            class="demo-cta-btn" target="_blank" rel="noopener">Message Rani on WhatsApp</a>
         <span class="demo-cta-microcopy">Opens WhatsApp. One message is all it takes to start.</span>
     </main>
